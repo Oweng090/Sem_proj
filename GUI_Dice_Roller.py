@@ -291,6 +291,7 @@ def theme_1():
     root.configure(bg="#FF0000") # Making window red
     rollZone.config(bg="#FFFB00", highlightbackground="#000000") # Making rollZones yeelow with black outline
     rollZone2.config(bg="#FFFB00", highlightbackground="#000000")
+    rollZone3.config(bg="#FFFB00", highlightbackground="#000000")
     label.config(bg="#FF0000") # making label match backround
     total_label.config(bg="#FF0000")
     total_label2.config(bg="#FF0000")
@@ -300,6 +301,7 @@ def theme_2():
     root.configure(bg="#AAAAAA")
     rollZone.config(bg="#808080", highlightbackground="#000000")
     rollZone2.config(bg="#808080", highlightbackground="#000000")
+    rollZone3.config(bg="#808080", highlightbackground="#000000")
     label.config(bg="#AAAAAA")
     total_label.config(bg="#AAAAAA")
     total_label2.config(bg="#AAAAAA")
