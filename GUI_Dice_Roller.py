@@ -30,7 +30,7 @@ rollZone = tk.Canvas(root, width=300, height=150, bg="blue", highlightthickness=
 rollZone.pack()
 rollZone.place(x=50, y=75)
 rollZone2 = tk.Canvas(root, width=300, height=150, bg="blue", highlightthickness=2.5, highlightbackground="lime")
-rollZone3 = tk.Canvas(root, width=300, height=150, )
+rollZone3 = tk.Canvas(root, width=300, height=150, bg="blue", highlightthickness=2.5, highlightbackground="lime")
 # Make the squares for the dice
 Dice1 = rollZone.create_rectangle(169, 20, 292.5, 140, fill="white", outline="black")# Squares for the dice
 Dice2 = rollZone.create_rectangle(18.5, 20, 142.5, 140, fill="white", outline="black")
@@ -315,6 +315,7 @@ def set2():
 def set3():
     root.geometry("1200x500")
     rollZone2.place(x=450, y=75)  # Moving the second rollzone to its place
+    rollZone3.place(x=850, y=75)
     roll_Button.place(x=535, y=325) # Moving all labels and buttons to the center of the window
     theme_button.place(x=435, y=285)
     theme_button2.place(x=635, y=285)
