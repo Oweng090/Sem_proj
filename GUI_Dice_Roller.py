@@ -69,6 +69,9 @@ right2_dot3 = rollZone2.create_oval(0, 0, 0, 0, fill="black", outline="black")
 right2_dot4 = rollZone2.create_oval(0, 0, 0, 0, fill="black", outline="black")
 right2_dot5 = rollZone2.create_oval(0, 0, 0, 0, fill="black", outline="black")
 right2_dot6 = rollZone2.create_oval(0, 0, 0, 0, fill="black", outline="black")
+# Set 3 dice
+set3_dice1 = rollZone3.create_rectangle(169, 20, 292.5, 140, fill="white", outline="black")
+set3_dice2 = rollZone3.create_rectangle(18.5, 20, 142.5, 140, fill="white", outline="black")
 # TODO: Buttons ====================================================================#
 # Roll Buttons
 roll_Button = tk.Button(root, text="Roll Dice", bg='lime', width=20, command=lambda: roll_dice("Roll!")) # defining a button for the GUI
