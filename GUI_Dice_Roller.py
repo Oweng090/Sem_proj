@@ -69,6 +69,11 @@ right2_dot3 = rollZone2.create_oval(0, 0, 0, 0, fill="black", outline="black")
 right2_dot4 = rollZone2.create_oval(0, 0, 0, 0, fill="black", outline="black")
 right2_dot5 = rollZone2.create_oval(0, 0, 0, 0, fill="black", outline="black")
 right2_dot6 = rollZone2.create_oval(0, 0, 0, 0, fill="black", outline="black")
+# Set 3 dice
+set3_dice1 = rollZone3.create_rectangle(169, 20, 292.5, 140, fill="white", outline="black")
+set3_dice2 = rollZone3.create_rectangle(18.5, 20, 142.5, 140, fill="white", outline="black")
+# set 3 dots
+left1_dot1 = rollZone3.create_oval(68.75, 64.75, 93.75, 89.75, fill="black", outline="black")
 # TODO: Buttons ====================================================================#
 # Roll Buttons
 roll_Button = tk.Button(root, text="Roll Dice", bg='lime', width=20, command=lambda: roll_dice("Roll!")) # defining a button for the GUI
@@ -288,6 +293,7 @@ def theme_1():
     root.configure(bg="#FF0000") # Making window red
     rollZone.config(bg="#FFFB00", highlightbackground="#000000") # Making rollZones yeelow with black outline
     rollZone2.config(bg="#FFFB00", highlightbackground="#000000")
+    rollZone3.config(bg="#FFFB00", highlightbackground="#000000")
     label.config(bg="#FF0000") # making label match backround
     total_label.config(bg="#FF0000")
     total_label2.config(bg="#FF0000")
@@ -297,6 +303,7 @@ def theme_2():
     root.configure(bg="#AAAAAA")
     rollZone.config(bg="#808080", highlightbackground="#000000")
     rollZone2.config(bg="#808080", highlightbackground="#000000")
+    rollZone3.config(bg="#808080", highlightbackground="#000000")
     label.config(bg="#AAAAAA")
     total_label.config(bg="#AAAAAA")
     total_label2.config(bg="#AAAAAA")
