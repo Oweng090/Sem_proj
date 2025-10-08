@@ -341,6 +341,49 @@ def roll_dice(side):
         rollZone3.coords(left3_dot4, 113.75, 64.75, 138.75, 89.75) # Middle Right
         rollZone3.coords(left3_dot5, 25.75, 110.25, 50.75, 135.25) # Bottom Left
         rollZone3.coords(left3_dot6, 113.75, 110.25, 138.75, 135.25) # Bottom Right
+
+    if set3_side2 == 1:
+        rollZone3.coords(right3_dot1, 220, 64.75, 245, 89.75)
+        rollZone3.coords(right3_dot2, 0, 0, 0, 0)
+        rollZone3.coords(right3_dot3, 0, 0, 0, 0)
+        rollZone3.coords(right3_dot4, 0, 0, 0, 0)
+        rollZone3.coords(right3_dot5, 0, 0, 0, 0)
+        rollZone3.coords(right3_dot6, 0, 0, 0, 0)
+    elif set3_side2 == 2:
+        rollZone3.coords(right3_dot1, 177, 110.25, 202, 135.25) # bottom left
+        rollZone3.coords(right3_dot2, 265, 24.25, 290, 49.25) # top right
+        rollZone3.coords(right3_dot3, 0, 0, 0, 0)
+        rollZone3.coords(right3_dot4, 0, 0, 0, 0)
+        rollZone3.coords(right3_dot5, 0, 0, 0, 0)
+        rollZone3.coords(right3_dot6, 0, 0, 0, 0)
+    elif set3_side2 == 3: 
+        rollZone3.coords(right3_dot1, 177, 110.25, 202, 135.25)# bottom left
+        rollZone3.coords(right3_dot2, 265, 24.25, 290, 49.25) # top right
+        rollZone3.coords(right3_dot3, 220, 64.75, 245, 89.75) # middle
+        rollZone3.coords(right3_dot4, 0, 0, 0, 0)
+        rollZone3.coords(right3_dot5, 0, 0, 0, 0)
+        rollZone3.coords(right3_dot6, 0, 0, 0, 0)
+    elif set3_side2 == 4:
+        rollZone3.coords(right3_dot1, 177, 110.25, 202, 135.25) # bottom left
+        rollZone3.coords(right3_dot2, 265, 24.25, 290, 49.25) # top right
+        rollZone3.coords(right3_dot3, 265, 110.25, 290, 135.25) # bottom right
+        rollZone3.coords(right3_dot4, 177, 24.25, 202, 49.25) # top left
+        rollZone3.coords(right3_dot5, 0, 0, 0, 0)
+        rollZone3.coords(right3_dot6, 0, 0, 0, 0)
+    elif set3_side2 == 5:
+        rollZone3.coords(right3_dot1, 177, 110.25, 202, 135.25) # bottom left
+        rollZone3.coords(right3_dot2, 265, 24.25, 290, 49.25) # top right
+        rollZone3.coords(right3_dot3, 265, 110.25, 290, 135.25) # bottom right
+        rollZone3.coords(right3_dot4, 177, 24.25, 202, 49.25) # top left
+        rollZone3.coords(right3_dot5, 220, 64.75, 245, 89.75) # middle 
+        rollZone3.coords(right3_dot6, 0, 0, 0, 0)
+    else:
+        rollZone3.coords(right3_dot1, 177, 110.25, 202, 135.25) # bottom left
+        rollZone3.coords(right3_dot2, 265, 24.25, 290, 49.25) # top right
+        rollZone3.coords(right3_dot3, 265, 110.25, 290, 135.25) # bottom right
+        rollZone3.coords(right3_dot4, 177, 24.25, 202, 49.25) # top left
+        rollZone3.coords(right3_dot5, 177, 64.75, 202, 89.75) # middle left
+        rollZone3.coords(right3_dot6, 265, 64.75, 290, 89.75) # middle right
         
     total_roll = side + side2
     total_label.config(text=f"Total roll: {total_roll}")
