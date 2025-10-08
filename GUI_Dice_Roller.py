@@ -296,6 +296,7 @@ def roll_dice(side):
 
     # Third set dice dicision Matrix
     set3_side = random.choice(sides)
+    set3_side2 = random.choice(sides)
 
     # Left Dice
     if set3_side == 1:
@@ -305,28 +306,28 @@ def roll_dice(side):
         rollZone3.coords(left3_dot4, 0, 0, 0, 0)
         rollZone3.coords(left3_dot5, 0, 0, 0, 0)
         rollZone3.coords(left3_dot6, 0, 0, 0, 0)
-    if set3_side == 2:
+    elif set3_side == 2:
         rollZone3.coords(left3_dot1, 25.75, 110.25, 50.75, 135.25)
         rollZone3.coords(left3_dot2, 113.75, 24.25, 138.75, 49.25)
         rollZone3.coords(left3_dot3, 0, 0, 0, 0)
         rollZone3.coords(left3_dot4, 0, 0, 0, 0)
         rollZone3.coords(left3_dot5, 0, 0, 0, 0)
         rollZone3.coords(left3_dot6, 0, 0, 0, 0)
-    if set3_side == 3:
+    elif set3_side == 3:
         rollZone3.coords(left3_dot1, 68.75, 64.75, 93.75, 89.75)
         rollZone3.coords(left3_dot2, 25.75, 110.25, 50.75, 135.25)
         rollZone3.coords(left3_dot3, 113.75, 24.25, 138.75, 49.25)
         rollZone3.coords(left3_dot4, 0, 0, 0, 0)
         rollZone3.coords(left3_dot5, 0, 0, 0, 0)
         rollZone3.coords(left3_dot6, 0, 0, 0, 0)
-    if set3_side == 4:
+    elif set3_side == 4:
         rollZone3.coords(left3_dot1, 25.75, 24.25, 50.75, 49.25)
         rollZone3.coords(left3_dot2, 113.75, 24.25, 138.75, 49.25)
         rollZone3.coords(left3_dot3, 25.75, 110.25, 50.75, 135.25)
         rollZone3.coords(left3_dot4, 113.75, 110.25, 138.75, 135.25)
         rollZone3.coords(left3_dot5, 0, 0, 0, 0)
         rollZone3.coords(left3_dot6, 0, 0, 0, 0)
-    if set3_side == 5:
+    elif set3_side == 5:
         rollZone3.coords(left3_dot1, 68.75, 64.75, 93.75, 89.75)
         rollZone3.coords(left3_dot2, 25.75, 24.25, 50.75, 49.25)
         rollZone3.coords(left3_dot3, 113.75, 24.25, 138.75, 49.25)
