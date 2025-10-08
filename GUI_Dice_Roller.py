@@ -159,8 +159,7 @@ def roll_dice(side):
         rollZone.coords(left_dot5, 25.75, 64.75, 50.75, 89.75) # middle left
         rollZone.coords(left_dot6, 113.75, 64.75, 138.75, 89.75) # middle right
     # second dice decision matrix
-    sides2 = [1, 2, 3, 4, 5, 6]
-    side2 = random.choice(sides2)
+    side2 = random.choice(sides)
 
     if(side2 == 1):
         rollZone.coords(right_dot1, 220, 64.75, 245, 89.75) # middle
@@ -205,8 +204,7 @@ def roll_dice(side):
         rollZone.coords(right_dot5, 177, 64.75, 202, 89.75) # middle left
         rollZone.coords(right_dot6, 265, 64.75, 290, 89.75) # middle right
     # Second Set First Dice logic
-    set2_side1 = [1, 2, 3, 4, 5, 6]
-    set2_side = random.choice(set2_side1)
+    set2_side = random.choice(sides)
 
     if set2_side == 1:
         rollZone2.coords(left2_dot1, 68.75, 64.75, 93.75, 89.75) # middle
@@ -250,38 +248,38 @@ def roll_dice(side):
         rollZone2.coords(left2_dot4, 113.75, 64.75, 138.75, 89.75) # Middle Right
         rollZone2.coords(left2_dot5, 25.75, 110.25, 50.75, 135.25) # Bottom Left
         rollZone2.coords(left2_dot6, 113.75, 110.25, 138.75, 135.25) # Bottom Right
-    set2_side2 = [1, 2, 3, 4, 5, 6]
-    set2_sides = random.choice(set2_side2)
 
-    if set2_sides == 1:
+    set2_side2 = random.choice(sides)
+
+    if set2_side2 == 1:
         rollZone2.coords(right2_dot1, 220, 64.75, 245, 89.75)
         rollZone2.coords(right2_dot2, 0, 0, 0, 0)
         rollZone2.coords(right2_dot3, 0, 0, 0, 0)
         rollZone2.coords(right2_dot4, 0, 0, 0, 0)
         rollZone2.coords(right2_dot5, 0, 0, 0, 0)
         rollZone2.coords(right2_dot6, 0, 0, 0, 0)
-    elif set2_sides == 2:
+    elif set2_side2 == 2:
         rollZone2.coords(right2_dot1, 177, 110.25, 202, 135.25) # bottom left
         rollZone2.coords(right2_dot2, 265, 24.25, 290, 49.25) # top right
         rollZone2.coords(right2_dot3, 0, 0, 0, 0)
         rollZone2.coords(right2_dot4, 0, 0, 0, 0)
         rollZone2.coords(right2_dot5, 0, 0, 0, 0)
         rollZone2.coords(right2_dot6, 0, 0, 0, 0)
-    elif set2_sides == 3: 
+    elif set2_side2 == 3: 
         rollZone2.coords(right2_dot1, 177, 110.25, 202, 135.25)# bottom left
         rollZone2.coords(right2_dot2, 265, 24.25, 290, 49.25) # top right
         rollZone2.coords(right2_dot3, 220, 64.75, 245, 89.75) # middle
         rollZone2.coords(right2_dot4, 0, 0, 0, 0)
         rollZone2.coords(right2_dot5, 0, 0, 0, 0)
         rollZone2.coords(right2_dot6, 0, 0, 0, 0)
-    elif set2_sides == 4:
+    elif set2_side2 == 4:
         rollZone2.coords(right2_dot1, 177, 110.25, 202, 135.25) # bottom left
         rollZone2.coords(right2_dot2, 265, 24.25, 290, 49.25) # top right
         rollZone2.coords(right2_dot3, 265, 110.25, 290, 135.25) # bottom right
         rollZone2.coords(right2_dot4, 177, 24.25, 202, 49.25) # top left
         rollZone2.coords(right2_dot5, 0, 0, 0, 0)
         rollZone2.coords(right2_dot6, 0, 0, 0, 0)
-    elif set2_sides == 5:
+    elif set2_side2 == 5:
         rollZone2.coords(right2_dot1, 177, 110.25, 202, 135.25) # bottom left
         rollZone2.coords(right2_dot2, 265, 24.25, 290, 49.25) # top right
         rollZone2.coords(right2_dot3, 265, 110.25, 290, 135.25) # bottom right
@@ -295,10 +293,57 @@ def roll_dice(side):
         rollZone2.coords(right2_dot4, 177, 24.25, 202, 49.25) # top left
         rollZone2.coords(right2_dot5, 177, 64.75, 202, 89.75) # middle left
         rollZone2.coords(right2_dot6, 265, 64.75, 290, 89.75) # middle right
+
+    # Third set dice dicision Matrix
+    set3_side = random.choice(sides)
+
+    # Left Dice
+    if set3_side == 1:
+        rollZone3.coords(left3_dot1, 68.75, 64.75, 93.75, 89.75)
+        rollZone3.coords(left3_dot2, 0, 0, 0, 0)
+        rollZone3.coords(left3_dot3, 0, 0, 0, 0)
+        rollZone3.coords(left3_dot4, 0, 0, 0, 0)
+        rollZone3.coords(left3_dot5, 0, 0, 0, 0)
+        rollZone3.coords(left3_dot6, 0, 0, 0, 0)
+    if set3_side == 2:
+        rollZone3.coords(left3_dot1, 25.75, 110.25, 50.75, 135.25)
+        rollZone3.coords(left3_dot2, 113.75, 24.25, 138.75, 49.25)
+        rollZone3.coords(left3_dot3, 0, 0, 0, 0)
+        rollZone3.coords(left3_dot4, 0, 0, 0, 0)
+        rollZone3.coords(left3_dot5, 0, 0, 0, 0)
+        rollZone3.coords(left3_dot6, 0, 0, 0, 0)
+    if set3_side == 3:
+        rollZone3.coords(left3_dot1, 68.75, 64.75, 93.75, 89.75)
+        rollZone3.coords(left3_dot2, 25.75, 110.25, 50.75, 135.25)
+        rollZone3.coords(left3_dot3, 113.75, 24.25, 138.75, 49.25)
+        rollZone3.coords(left3_dot4, 0, 0, 0, 0)
+        rollZone3.coords(left3_dot5, 0, 0, 0, 0)
+        rollZone3.coords(left3_dot6, 0, 0, 0, 0)
+    if set3_side == 4:
+        rollZone3.coords(left3_dot1, 25.75, 24.25, 50.75, 49.25)
+        rollZone3.coords(left3_dot2, 113.75, 24.25, 138.75, 49.25)
+        rollZone3.coords(left3_dot3, 25.75, 110.25, 50.75, 135.25)
+        rollZone3.coords(left3_dot4, 113.75, 110.25, 138.75, 135.25)
+        rollZone3.coords(left3_dot5, 0, 0, 0, 0)
+        rollZone3.coords(left3_dot6, 0, 0, 0, 0)
+    if set3_side == 5:
+        rollZone3.coords(left3_dot1, 68.75, 64.75, 93.75, 89.75)
+        rollZone3.coords(left3_dot2, 25.75, 24.25, 50.75, 49.25)
+        rollZone3.coords(left3_dot3, 113.75, 24.25, 138.75, 49.25)
+        rollZone3.coords(left3_dot4, 25.75, 110.25, 50.75, 135.25)
+        rollZone3.coords(left3_dot5, 113.75, 110.25, 138.75, 135.25)
+        rollZone3.coords(left3_dot6, 0, 0, 0, 0)
+    else:
+        rollZone3.coords(left3_dot1, 25.75, 24.25, 50.75, 49.25) # Top Left
+        rollZone3.coords(left3_dot2, 113.75, 24.25, 138.75, 49.25) # Top right
+        rollZone3.coords(left3_dot3, 25.75, 64.75, 50.75, 89.75) # Middle Left
+        rollZone3.coords(left3_dot4, 113.75, 64.75, 138.75, 89.75) # Middle Right
+        rollZone3.coords(left3_dot5, 25.75, 110.25, 50.75, 135.25) # Bottom Left
+        rollZone3.coords(left3_dot6, 113.75, 110.25, 138.75, 135.25) # Bottom Right
         
     total_roll = side + side2
     total_label.config(text=f"Total roll: {total_roll}")
-    total_roll2 = set2_side + set2_sides
+    total_roll2 = set2_side + set2_side2
     total_label2.config(text=f"Total roll: {total_roll2}")
 # Function for the theme 1 button 
 def theme_1():
