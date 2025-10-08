@@ -19,6 +19,7 @@ label.pack(pady=20)
 total_label = tk.Label(root, text=" ", bg='grey', font=("Arial", 14)) # label for the total of the rolls.
 total_label.place(x=150, y=345)
 total_label2 = tk.Label(root, text=" ", bg="grey", font=("Arial", 14))# Label for the second sets total
+total_label3 = tk.Label(root, text=" ", bg="grey", font=("Arial", 14))
 
 set_label = tk.Label(root, text="More Sets?", bg="grey", font=("Arial", 14))  
 set_label.place(x=150, y=375)
@@ -389,6 +390,8 @@ def roll_dice(side):
     total_label.config(text=f"Total roll: {total_roll}")
     total_roll2 = set2_side + set2_side2
     total_label2.config(text=f"Total roll: {total_roll2}")
+    total_roll3 = set3_side + set3_side2
+    total_label3.config(text=f"Total roll: {total_roll3}")
 # Function for the theme 1 button 
 def theme_1():
     root.configure(bg="#FF0000") # Making window red
@@ -432,4 +435,5 @@ def set3():
     set_label.place(x=550, y=375)
     total_label.place(x=150, y=250)
     total_label2.place(x=560, y=250)
+    total_label3.place(x=960, y=250)
 root.mainloop() 
