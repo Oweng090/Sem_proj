@@ -401,6 +401,7 @@ def theme_1():
     label.config(bg="#FF0000") # making label match backround
     total_label.config(bg="#FF0000")
     total_label2.config(bg="#FF0000")
+    total_label3.config(bg="#FF0000")
     set_label.config(bg="#FF0000")
 # Function for theme button 2.
 def theme_2():
@@ -411,6 +412,7 @@ def theme_2():
     label.config(bg="#AAAAAA")
     total_label.config(bg="#AAAAAA")
     total_label2.config(bg="#AAAAAA")
+    total_label3.config(bg="#AAAAAA")
     set_label.config(bg="#AAAAAA")
 def set2():
     root.geometry("800x500") # making window bigger for second set of dice
