@@ -32,6 +32,7 @@ rollZone.pack()
 rollZone.place(x=50, y=75)
 rollZone2 = tk.Canvas(root, width=300, height=150, bg="blue", highlightthickness=2.5, highlightbackground="lime")
 rollZone3 = tk.Canvas(root, width=300, height=150, bg="blue", highlightthickness=2.5, highlightbackground="lime")
+rollZone4 = tk.Canvas(root, width=300, height=150, bg="blue", highlightthickness=2.5, highlightbackground="lime")
 # Make the squares for the dice
 Dice1 = rollZone.create_rectangle(169, 20, 292.5, 140, fill="white", outline="black")# Squares for the dice
 Dice2 = rollZone.create_rectangle(18.5, 20, 142.5, 140, fill="white", outline="black")
@@ -87,6 +88,9 @@ right3_dot3 = rollZone3.create_oval(0, 0, 0, 0, fill="black", outline="black")
 right3_dot4 = rollZone3.create_oval(0, 0, 0, 0, fill="black", outline="black")
 right3_dot5 = rollZone3.create_oval(0, 0, 0, 0, fill="black", outline="black")
 right3_dot6 = rollZone3.create_oval(0, 0, 0, 0, fill="black", outline="black")
+# Set 4
+set4_dice1 = rollZone4.create_rectangle(169, 20, 292.5, 140, fill="white", outline="black")
+set4_dice2 = rollZone4.create_rectangle(18.5, 20, 142.5, 140, fill="white", outline="black")
 # TODO: Buttons ====================================================================#
 # Roll Buttons
 roll_Button = tk.Button(root, text="Roll Dice", bg='lime', width=20, command=lambda: roll_dice("Roll!")) # defining a button for the GUI
@@ -101,9 +105,11 @@ set_button1 = tk.Button(root, text="2 Sets", bg="lime", width=20, command=lambda
 set_button1.place(x=125, y=415)
 set_button2 = tk.Button(root, text="3 Sets", bg="lime", width=20, command=lambda: set3())
 set_button2.place(x=125, y=445)
+set_button3 = tk.Button(root, text="4 Sets", bg="lime", width=20, command=lambda: set4())
+set_button3.place(x=125, y=475)
 #===================================================================================#
 root.title("Dice!")
-root.geometry("400x500") # temporary window sizeot
+root.geometry("400x550") # temporary window sizeot
 root.configure(bg='grey')
 # create a function for the dice rolling
 def roll_dice(side):
@@ -398,6 +404,7 @@ def theme_1():
     rollZone.config(bg="#FFFB00", highlightbackground="#000000") # Making rollZones yeelow with black outline
     rollZone2.config(bg="#FFFB00", highlightbackground="#000000")
     rollZone3.config(bg="#FFFB00", highlightbackground="#000000")
+    rollZone4.config(bg="#FFFB00", highlightbackground="#000000")
     label.config(bg="#FF0000") # making label match backround
     total_label.config(bg="#FF0000")
     total_label2.config(bg="#FF0000")
@@ -409,13 +416,14 @@ def theme_2():
     rollZone.config(bg="#808080", highlightbackground="#000000")
     rollZone2.config(bg="#808080", highlightbackground="#000000")
     rollZone3.config(bg="#808080", highlightbackground="#000000")
+    rollZone4.config(bg="#808080", highlightbackground="#000000")
     label.config(bg="#AAAAAA")
     total_label.config(bg="#AAAAAA")
     total_label2.config(bg="#AAAAAA")
     total_label3.config(bg="#AAAAAA")
     set_label.config(bg="#AAAAAA")
 def set2():
-    root.geometry("800x500") # making window bigger for second set of dice
+    root.geometry("800x550") # making window bigger for second set of dice
     rollZone2.place(x=450, y=75)  # Moving the second rollzone to its place
     roll_Button.place(x=325, y=250) # Moving all labels and buttons to the center of the window
     theme_button.place(x=225, y=285)
@@ -426,7 +434,7 @@ def set2():
     total_label.place(x=150, y=250)
     total_label2.place(x=560, y=250)
 def set3():
-    root.geometry("1200x500")
+    root.geometry("1200x550")
     rollZone2.place(x=450, y=75)  # Moving the second rollzone to its place
     rollZone3.place(x=850, y=75)
     roll_Button.place(x=535, y=325) # Moving all labels and buttons to the center of the window
@@ -438,4 +446,10 @@ def set3():
     total_label.place(x=150, y=250)
     total_label2.place(x=560, y=250)
     total_label3.place(x=960, y=250)
+def set4():
+    root.geometry("1200x550")
+    rollZone2.place(x=450, y=75)
+    rollZone3.place(x=850, y=75)
+    rollZone4.place(x=450, y=275)
+    
 root.mainloop() 
