@@ -91,6 +91,20 @@ right3_dot6 = rollZone3.create_oval(0, 0, 0, 0, fill="black", outline="black")
 # Set 4
 set4_dice1 = rollZone4.create_rectangle(169, 20, 292.5, 140, fill="white", outline="black")
 set4_dice2 = rollZone4.create_rectangle(18.5, 20, 142.5, 140, fill="white", outline="black")
+# Set 4 dots (Left)
+left4_dot1 = rollZone4.create_oval(68.75, 64.75, 93.75, 89.75, fill="black", outline="black")
+left4_dot2 = rollZone4.create_oval(0, 0, 0, 0, fil="black", outline="black")
+left4_dot3 = rollZone4.create_oval(0, 0, 0, 0, fil="black", outline="black")
+left4_dot4 = rollZone4.create_oval(0, 0, 0, 0, fil="black", outline="black")
+left4_dot5 = rollZone4.create_oval(0, 0, 0, 0, fil="black", outline="black")
+left4_dot6 = rollZone4.create_oval(0, 0, 0, 0, fil="black", outline="black")
+# Set 4 dots (Right)
+right4_dot1 = rollZone4.create_oval(220, 64.75, 245, 89.75, fill="black", outline="black")
+right4_dot2 = rollZone4.create_oval(0, 0, 0, 0, fil="black", outline="black")
+right4_dot3 = rollZone4.create_oval(0, 0, 0, 0, fil="black", outline="black")
+right4_dot4 = rollZone4.create_oval(0, 0, 0, 0, fil="black", outline="black")
+right4_dot5 = rollZone4.create_oval(0, 0, 0, 0, fil="black", outline="black")
+right4_dot6 = rollZone4.create_oval(0, 0, 0, 0, fil="black", outline="black")
 # TODO: Buttons ====================================================================#
 # Roll Buttons
 roll_Button = tk.Button(root, text="Roll Dice", bg='lime', width=20, command=lambda: roll_dice("Roll!")) # defining a button for the GUI
@@ -391,6 +405,13 @@ def roll_dice(side):
         rollZone3.coords(right3_dot4, 177, 24.25, 202, 49.25) # top left
         rollZone3.coords(right3_dot5, 177, 64.75, 202, 89.75) # middle left
         rollZone3.coords(right3_dot6, 265, 64.75, 290, 89.75) # middle right
+
+    set4_side1 = random.choice(sides)
+
+    if set4_side1 == 1:
+        rollZone4.coords(left4_dot1, 68.75, 64.75, 93.75, 89.75)
+        rollZone4.coords(left4_dot2, 0, 0, 0, 0)
+        
         
     total_roll = side + side2
     total_label.config(text=f"Total roll: {total_roll}")
