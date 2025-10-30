@@ -407,10 +407,94 @@ def roll_dice(side):
         rollZone3.coords(right3_dot6, 265, 64.75, 290, 89.75) # middle right
 
     set4_side1 = random.choice(sides)
+    set4_side2 = random.choice(sides)
 
     if set4_side1 == 1:
         rollZone4.coords(left4_dot1, 68.75, 64.75, 93.75, 89.75)
         rollZone4.coords(left4_dot2, 0, 0, 0, 0)
+        rollZone4.coords(left4_dot3, 0, 0, 0, 0)
+        rollZone4.coords(left4_dot4, 0, 0, 0, 0)
+        rollZone4.coords(left4_dot5, 0, 0, 0, 0)
+        rollZone4.coords(left4_dot6, 0, 0, 0, 0)
+    elif set4_side1 == 2:
+        rollZone4.coords(left4_dot1, 25.75, 110.25, 50.75, 135.25)
+        rollZone4.coords(left4_dot2, 113.75, 24.25, 138.75, 49.25)
+        rollZone4.coords(left4_dot3, 0, 0, 0, 0)
+        rollZone4.coords(left4_dot4, 0, 0, 0, 0)
+        rollZone4.coords(left4_dot5, 0, 0, 0, 0)
+        rollZone4.coords(left4_dot6, 0, 0, 0, 0)
+    elif set4_side1 == 3:
+        rollZone4.coords(left4_dot1, 68.75, 64.75, 93.75, 89.75)
+        rollZone4.coords(left4_dot2, 25.75, 110.25, 50.75, 135.25)
+        rollZone4.coords(left4_dot3, 113.75, 24.25, 138.75, 49.25)
+        rollZone4.coords(left4_dot4, 0, 0, 0, 0)
+        rollZone4.coords(left4_dot5, 0, 0, 0, 0)
+        rollZone4.coords(left4_dot6, 0, 0, 0, 0)
+    elif set4_side1 == 4:
+        rollZone4.coords(left4_dot1, 25.75, 24.25, 50.75, 49.25)
+        rollZone4.coords(left4_dot2, 113.75, 24.25, 138.75, 49.25)
+        rollZone4.coords(left4_dot3, 25.75, 110.25, 50.75, 135.25)
+        rollZone4.coords(left4_dot4, 113.75, 110.25, 138.75, 135.25)
+        rollZone4.coords(left4_dot5, 0, 0, 0, 0)
+        rollZone4.coords(left4_dot6, 0, 0, 0, 0)
+    elif set4_side1 == 5:
+        rollZone4.coords(left4_dot1, 68.75, 64.75, 93.75, 89.75)
+        rollZone4.coords(left4_dot2, 25.75, 24.25, 50.75, 49.25)
+        rollZone4.coords(left4_dot3, 113.75, 24.25, 138.75, 49.25)
+        rollZone4.coords(left4_dot4, 25.75, 110.25, 50.75, 135.25)
+        rollZone4.coords(left4_dot5, 113.75, 110.25, 138.75, 135.25)
+        rollZone4.coords(left4_dot6, 0, 0, 0, 0)
+    else:
+        rollZone4.coords(left4_dot1, 25.75, 24.25, 50.75, 49.25) # Top Left
+        rollZone4.coords(left4_dot2, 113.75, 24.25, 138.75, 49.25) # Top right
+        rollZone4.coords(left4_dot3, 25.75, 64.75, 50.75, 89.75) # Middle Left
+        rollZone4.coords(left4_dot4, 113.75, 64.75, 138.75, 89.75) # Middle Right
+        rollZone4.coords(left4_dot5, 25.75, 110.25, 50.75, 135.25) # Bottom Left
+        rollZone4.coords(left4_dot6, 113.75, 110.25, 138.75, 135.25) # Bottom Right
+
+    if set4_side2 == 1:
+        rollZone4.coords(right4_dot1, 220, 64.75, 245, 89.75)
+        rollZone4.coords(right4_dot2, 0, 0, 0, 0)
+        rollZone4.coords(right4_dot3, 0, 0, 0, 0)
+        rollZone4.coords(right4_dot4, 0, 0, 0, 0)
+        rollZone4.coords(right4_dot5, 0, 0, 0, 0)
+        rollZone4.coords(right4_dot6, 0, 0, 0, 0)
+    elif set4_side2 == 2:
+        rollZone4.coords(right4_dot1, 177, 110.25, 202, 135.25) # bottom left
+        rollZone4.coords(right4_dot2, 265, 24.25, 290, 49.25) # top right
+        rollZone4.coords(right4_dot3, 0, 0, 0, 0)
+        rollZone4.coords(right4_dot4, 0, 0, 0, 0)
+        rollZone4.coords(right4_dot5, 0, 0, 0, 0)
+        rollZone4.coords(right4_dot6, 0, 0, 0, 0)
+    elif set4_side2 == 3: 
+        rollZone4.coords(right4_dot1, 177, 110.25, 202, 135.25)# bottom left
+        rollZone4.coords(right4_dot2, 265, 24.25, 290, 49.25) # top right
+        rollZone4.coords(right4_dot3, 220, 64.75, 245, 89.75) # middle
+        rollZone4.coords(right4_dot4, 0, 0, 0, 0)
+        rollZone4.coords(right4_dot5, 0, 0, 0, 0)
+        rollZone4.coords(right4_dot6, 0, 0, 0, 0)
+    elif set4_side2 == 4:
+        rollZone4.coords(right4_dot1, 177, 110.25, 202, 135.25) # bottom left
+        rollZone4.coords(right4_dot2, 265, 24.25, 290, 49.25) # top right
+        rollZone4.coords(right4_dot3, 265, 110.25, 290, 135.25) # bottom right
+        rollZone4.coords(right4_dot4, 177, 24.25, 202, 49.25) # top left
+        rollZone4.coords(right4_dot5, 0, 0, 0, 0)
+        rollZone4.coords(right4_dot6, 0, 0, 0, 0)
+    elif set4_side2 == 5:
+        rollZone4.coords(right4_dot1, 177, 110.25, 202, 135.25) # bottom left
+        rollZone4.coords(right4_dot2, 265, 24.25, 290, 49.25) # top right
+        rollZone4.coords(right4_dot3, 265, 110.25, 290, 135.25) # bottom right
+        rollZone4.coords(right4_dot4, 177, 24.25, 202, 49.25) # top left
+        rollZone4.coords(right4_dot5, 220, 64.75, 245, 89.75) # middle 
+        rollZone4.coords(right4_dot6, 0, 0, 0, 0)
+    else:
+        rollZone4.coords(right4_dot1, 177, 110.25, 202, 135.25) # bottom left
+        rollZone4.coords(right4_dot2, 265, 24.25, 290, 49.25) # top right
+        rollZone4.coords(right4_dot3, 265, 110.25, 290, 135.25) # bottom right
+        rollZone4.coords(right4_dot4, 177, 24.25, 202, 49.25) # top left
+        rollZone4.coords(right4_dot5, 177, 64.75, 202, 89.75) # middle left
+        rollZone4.coords(right4_dot6, 265, 64.75, 290, 89.75) # middle right
+
         
         
     total_roll = side + side2
@@ -472,5 +556,13 @@ def set4():
     rollZone2.place(x=450, y=75)
     rollZone3.place(x=850, y=75)
     rollZone4.place(x=450, y=275)
+    roll_Button.place(x=125, y=250) # Moving all labels and buttons to the center of the window
+    theme_button.place(x=25, y=285)
+    theme_button2.place(x=225, y=285)
+    set_button1.place(x=125, y=415)
+    set_button2.place(x=125, y=445)
+    set_label.place(x=150, y=375)
+    total_label.place(x=150, y=345)
+    total_label2.place(x=560, y=250)
     
 root.mainloop() 
