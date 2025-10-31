@@ -12,7 +12,7 @@ import random
 #Create the individual window.
 root = tk.Tk()
 
-# TODO: Labels!
+# TODO: Labels! ----------------------------------------------------------------------#
 label = tk.Label(root, text="Dice Roll!", bg='grey', font=("Arial", 14)) # Title
 label.pack(pady=20)
 
@@ -20,6 +20,7 @@ total_label = tk.Label(root, text=" ", bg='grey', font=("Arial", 14)) # label fo
 total_label.place(x=150, y=345)
 total_label2 = tk.Label(root, text=" ", bg="grey", font=("Arial", 14))# Label for the second sets total
 total_label3 = tk.Label(root, text=" ", bg="grey", font=("Arial", 14))
+total_label4 = tk.Label(root, text=" ", bg="grey", font=("Arial", 14))
 
 set_label = tk.Label(root, text="More Sets?", bg="grey", font=("Arial", 14))  
 set_label.place(x=150, y=375)
@@ -503,6 +504,8 @@ def roll_dice(side):
     total_label2.config(text=f"Total roll: {total_roll2}")
     total_roll3 = set3_side + set3_side2
     total_label3.config(text=f"Total roll: {total_roll3}")
+    total_roll4 = set4_side1 + set4_side2
+    total_label4.config(text=f"Total roll: {total_roll4}")
 # Function for the theme 1 button 
 def theme_1():
     root.configure(bg="#FF0000") # Making window red
@@ -542,6 +545,7 @@ def set3():
     root.geometry("1200x550")
     rollZone2.place(x=450, y=75)  # Moving the second rollzone to its place
     rollZone3.place(x=850, y=75)
+    # Make rollZone4 dissapear somehow
     roll_Button.place(x=535, y=325) # Moving all labels and buttons to the center of the window
     theme_button.place(x=435, y=285)
     theme_button2.place(x=635, y=285)
@@ -556,13 +560,16 @@ def set4():
     rollZone2.place(x=450, y=75)
     rollZone3.place(x=850, y=75)
     rollZone4.place(x=450, y=275)
-    roll_Button.place(x=125, y=250) # Moving all labels and buttons to the center of the window
-    theme_button.place(x=25, y=285)
-    theme_button2.place(x=225, y=285)
-    set_button1.place(x=125, y=415)
-    set_button2.place(x=125, y=445)
-    set_label.place(x=150, y=375)
-    total_label.place(x=150, y=345)
-    total_label2.place(x=560, y=250)
+    roll_Button.place(x=125, y=270) # Moving all labels and buttons to the center of the window
+    theme_button.place(x=25, y=305)
+    theme_button2.place(x=225, y=305)
+    set_button1.place(x=125, y=435)
+    set_button2.place(x=125, y=465)
+    set_button3.place(x=125, y=495)
+    set_label.place(x=150, y=355)
+    total_label.place(x=150, y=235)
+    total_label2.place(x=560, y=235)
+    total_label3.place(x=960, y=235)
+    total_label4.place(x=560, y=435)
     
 root.mainloop() 
