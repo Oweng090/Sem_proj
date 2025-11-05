@@ -532,15 +532,19 @@ def theme_2():
     set_label.config(bg="#AAAAAA")
 def set2():
     root.geometry("800x550") # making window bigger for second set of dice
-    rollZone2.place(x=450, y=75)  # Moving the second rollzone to its place
+    rollZone2.place(x=450, y=75) # Moving the second rollzone to its place
+    rollZone3.place_forget()
+    rollZone4.place_forget()
     roll_Button.place(x=325, y=250) # Moving all labels and buttons to the center of the window
     theme_button.place(x=225, y=285)
     theme_button2.place(x=425, y=285)
     set_button1.place(x=325, y=415)
     set_button2.place(x=325, y=445)
+    set_button3.place(x=325, y=475)
     set_label.place(x=350, y=375)
     total_label.place(x=150, y=250)
     total_label2.place(x=560, y=250)
+    total_label3.place_forget()
     total_label4.place_forget()
 def set3():
     root.geometry("1200x550")
