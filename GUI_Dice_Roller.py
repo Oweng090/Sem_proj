@@ -541,20 +541,23 @@ def set2():
     set_label.place(x=350, y=375)
     total_label.place(x=150, y=250)
     total_label2.place(x=560, y=250)
+    total_label4.place_forget()
 def set3():
     root.geometry("1200x550")
     rollZone2.place(x=450, y=75)  # Moving the second rollzone to its place
     rollZone3.place(x=850, y=75)
-    # Make rollZone4 dissapear somehow
+    rollZone4.place_forget() # temporarily remove roll zone 4
     roll_Button.place(x=535, y=325) # Moving all labels and buttons to the center of the window
     theme_button.place(x=435, y=285)
     theme_button2.place(x=635, y=285)
     set_button1.place(x=535, y=415)
     set_button2.place(x=535, y=445)
+    set_button3.place(x=535, y=475)
     set_label.place(x=550, y=375)
     total_label.place(x=150, y=250)
     total_label2.place(x=560, y=250)
     total_label3.place(x=960, y=250)
+    total_label4.place_forget()
 def set4():
     root.geometry("1200x550")
     rollZone2.place(x=450, y=75)
