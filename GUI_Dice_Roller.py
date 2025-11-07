@@ -514,6 +514,24 @@ def roll_dice(side):
         rollZone4.coords(right4_dot5, 177, 64.75, 202, 89.75) # middle left
         rollZone4.coords(right4_dot6, 265, 64.75, 290, 89.75) # middle right
 
+    set5_side1 = random.choice(sides)
+    set5_side2 = random.choice(sides)
+
+    if set5_side1 == 1:
+        rollZone5.coords(left5_dot1, 68.75, 64.75, 93.75, 89.75)
+        rollZone5.coords(left5_dot2, 0, 0, 0, 0)
+        rollZone5.coords(left5_dot3, 0, 0, 0, 0)
+        rollZone5.coords(left5_dot4, 0, 0, 0, 0)
+        rollZone5.coords(left5_dot5, 0, 0, 0, 0)
+        rollZone5.coords(left5_dot6, 0, 0, 0, 0)
+    elif set5_side1 == 2:
+        rollZone5.coords(left5_dot1, 25.75, 110.25, 50.75, 135.25)
+        rollZone5.coords(left5_dot2, 113.75, 24.25, 138.75, 49.25)
+        rollZone5.coords(left5_dot3, 0, 0, 0, 0)
+        rollZone5.coords(left5_dot4, 0, 0, 0, 0)
+        rollZone5.coords(left5_dot5, 0, 0, 0, 0)
+        rollZone5.coords(left5_dot6, 0, 0, 0, 0)
+
         
         
     total_roll = side + side2
