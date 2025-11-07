@@ -531,9 +531,35 @@ def roll_dice(side):
         rollZone5.coords(left5_dot4, 0, 0, 0, 0)
         rollZone5.coords(left5_dot5, 0, 0, 0, 0)
         rollZone5.coords(left5_dot6, 0, 0, 0, 0)
+    elif set5_side1 == 3:
+        rollZone5.coords(left5_dot1, 68.75, 64.75, 93.75, 89.75)
+        rollZone5.coords(left5_dot2, 25.75, 110.25, 50.75, 135.25)
+        rollZone5.coords(left5_dot3, 113.75, 24.25, 138.75, 49.25)
+        rollZone5.coords(left5_dot4, 0, 0, 0, 0)
+        rollZone5.coords(left5_dot5, 0, 0, 0, 0)
+        rollZone5.coords(left5_dot6, 0, 0, 0, 0)
+    elif set5_side1 == 4:
+        rollZone5.coords(left5_dot1, 25.75, 24.25, 50.75, 49.25)
+        rollZone5.coords(left5_dot2, 113.75, 24.25, 138.75, 49.25)
+        rollZone5.coords(left5_dot3, 25.75, 110.25, 50.75, 135.25)
+        rollZone5.coords(left5_dot4, 113.75, 110.25, 138.75, 135.25)
+        rollZone5.coords(left5_dot5, 0, 0, 0, 0)
+        rollZone5.coords(left5_dot6, 0, 0, 0, 0)
+    elif set5_side1 == 5:
+        rollZone5.coords(left5_dot1, 68.75, 64.75, 93.75, 89.75)
+        rollZone5.coords(left5_dot2, 25.75, 24.25, 50.75, 49.25)
+        rollZone5.coords(left5_dot3, 113.75, 24.25, 138.75, 49.25)
+        rollZone5.coords(left5_dot4, 25.75, 110.25, 50.75, 135.25)
+        rollZone5.coords(left5_dot5, 113.75, 110.25, 138.75, 135.25)
+        rollZone5.coords(left5_dot6, 0, 0, 0, 0)
+    else:
+        rollZone5.coords(left5_dot1, 25.75, 24.25, 50.75, 49.25) # Top Left
+        rollZone5.coords(left5_dot2, 113.75, 24.25, 138.75, 49.25) # Top right
+        rollZone5.coords(left5_dot3, 25.75, 64.75, 50.75, 89.75) # Middle Left
+        rollZone5.coords(left5_dot4, 113.75, 64.75, 138.75, 89.75) # Middle Right
+        rollZone5.coords(left5_dot5, 25.75, 110.25, 50.75, 135.25) # Bottom Left
+        rollZone5.coords(left5_dot6, 113.75, 110.25, 138.75, 135.25) # Bottom Right
 
-        
-        
     total_roll = side + side2
     total_label.config(text=f"Total roll: {total_roll}")
     total_roll2 = set2_side + set2_side2
