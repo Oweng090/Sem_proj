@@ -149,18 +149,18 @@ root.geometry("400x550") # temporary window sizeot
 root.configure(bg='grey')
 # create a function for the dice rolling
 def roll_dice(side):
+    # Set 1
     sides = [1, 2, 3, 4, 5, 6]
     side = random.choice(sides)
     RollLogic.rollLogic(side, rollZone, left_dot1, left_dot2, left_dot3, left_dot4, left_dot5, left_dot6)
-    # first dice rolling decision matrix
-    # second dice decision matrix
     side2 = random.choice(sides)
-
     RollLogic.rollLogic2(side2, rollZone, right_dot1, right_dot2, right_dot3, right_dot4, right_dot5, right_dot6)
+
     # Set 2
     set2_side1 = random.choice(sides)
     set2_side2 = random.choice(sides)
-    RollLogic.rollLogic(set2_side1, rollZone2, left2_dot1, left2_dot2, left2_dot3, left2_dot4, left2_dot5, left2_dot6) 
+    RollLogic.rollLogic(set2_side1, rollZone2, left2_dot1, left2_dot2, left2_dot3, left2_dot4, left2_dot5, left2_dot6)
+    RollLogic.rollLogic2(set2_side2, rollZone2, right2_dot1, right2_dot2, right2_dot3, right2_dot4, right2_dot5, right2_dot6) 
 
     # Third set dice dicision Matrix
     set3_side = random.choice(sides)
