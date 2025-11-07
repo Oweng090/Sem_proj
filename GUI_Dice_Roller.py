@@ -262,6 +262,7 @@ def set2():
     total_label2.place(x=560, y=250)
     total_label3.place_forget()
     total_label4.place_forget()
+    total_label5.place_forget()
 def set3():
     root.geometry("1200x575")
     rollZone2.place(x=450, y=75)  # Moving the second rollzone to its place
@@ -281,6 +282,7 @@ def set3():
     total_label2.place(x=560, y=250)
     total_label3.place(x=960, y=250)
     total_label4.place_forget()
+    total_label5.place_forget()
 def set4():
     root.geometry("1200x575")
     rollZone2.place(x=450, y=75)
