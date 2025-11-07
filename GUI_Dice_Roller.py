@@ -10,7 +10,7 @@ import tkinter as tk
 import random
 import RollLogic
 
-roll = RollLogic()
+roll = RollLogic.rollLogic()
 
 #Create the individual window.
 root = tk.Tk()
@@ -151,7 +151,7 @@ root.configure(bg='grey')
 def roll_dice(side):
     sides = [1, 2, 3, 4, 5, 6]
     side = random.choice(sides)
-    roll(side, rollZone, left_dot1)
+    roll(side, rollZone, left_dot1, left_dot2, left_dot3, left_dot4, left_dot5, left_dot6)
     # first dice rolling decision matrix
     """if (side == 1):  # Note: maybe build each dice face for each if scenario ( if side = 1 then build the dice with one dot.)
         # the side will be 1
