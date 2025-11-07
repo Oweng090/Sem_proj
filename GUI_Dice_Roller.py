@@ -27,7 +27,7 @@ total_label4 = tk.Label(root, text=" ", bg="grey", font=("Arial", 14))
 total_label5 = tk.Label(root, text=" ", bg="grey", font=("Arial", 14))
 
 set_label = tk.Label(root, text="More Sets?", bg="grey", font=("Arial", 14))  
-set_label.place(x=150, y=375)
+set_label.place(x=150, y=350)
 
 # TODO: Dice visuals ==================================================================#
 # Make an area to make squares for the dice and the dots
@@ -138,6 +138,8 @@ theme_button.place(x=25, y=285)
 theme_button2 = tk.Button(root, text="Theme 2", bg="#3E3E3E", fg="#FFFFFF", width=20, command=lambda: theme_2())
 theme_button2.place(x=225, y=285)
 # Set Buttons
+set_button1 = tk.Button(root, text="1 Set", bg="lime", width=20, command=lambda: set1())
+set_button1.place(x=125, y=385)
 set_button2 = tk.Button(root, text="2 Sets", bg="lime", width=20, command=lambda: set2())
 set_button2.place(x=125, y=415)
 set_button3 = tk.Button(root, text="3 Sets", bg="lime", width=20, command=lambda: set3())
@@ -148,7 +150,7 @@ set_button5 = tk.Button(root, text="5 Sets", bg="lime", width=20, command=lambda
 set_button5.place(x=125, y=505)
 #===================================================================================#
 root.title("Dice!")
-root.geometry("400x550") # temporary window sizeot
+root.geometry("400x575")
 root.configure(bg='grey')
 # create a function for the dice rolling
 def roll_dice(side):
@@ -205,7 +207,7 @@ def theme_1():
     total_label2.config(bg="#FF0000")
     total_label3.config(bg="#FF0000")
     total_label4.config(bg="#FF0000")
-    set_label.config(bg="#FF0000")
+    set_label.config(bg="#FF0000")  
 # Function for theme button 2.
 def theme_2():
     root.configure(bg="#AAAAAA")
@@ -219,42 +221,68 @@ def theme_2():
     total_label3.config(bg="#AAAAAA")
     total_label4.config(bg="#AAAAAA")
     set_label.config(bg="#AAAAAA")
+
+def set1():
+    root.geometry("400x575")
+    rollZone2.place_forget()
+    rollZone3.place_forget()
+    rollZone4.place_forget()
+    rollZone5.place_forget()
+    roll_Button.place(x=125, y=250)
+    theme_button.place(x=25, y=285)
+    theme_button2.place(x=225, y=285)
+    set_button1.place(x=125, y=385)
+    set_button2.place(x=125, y=415)
+    set_button3.place(x=125, y=445)
+    set_button4.place(x=125, y=475)
+    set_button5.place(x=125, y=505)
+    set_label.place(x=150, y=350)
+    total_label.place(x=150, y=250)
+    total_label2.place_forget()
+    total_label3.place_forget()
+    total_label4.place_forget()
+    total_label5.place_forget()
+
 def set2():
-    root.geometry("800x550") # making window bigger for second set of dice
+    root.geometry("800x575") # making window bigger for second set of dice
     rollZone2.place(x=450, y=75) # Moving the second rollzone to its place
     rollZone3.place_forget()
     rollZone4.place_forget()
+    rollZone5.place_forget()
     roll_Button.place(x=325, y=250) # Moving all labels and buttons to the center of the window
     theme_button.place(x=225, y=285)
     theme_button2.place(x=425, y=285)
+    set_button1.place(x=325, y=385)
     set_button2.place(x=325, y=415)
     set_button3.place(x=325, y=445)
     set_button4.place(x=325, y=475)
     set_button5.place(x=325, y=505)
-    set_label.place(x=350, y=375)
+    set_label.place(x=350, y=350)
     total_label.place(x=150, y=250)
     total_label2.place(x=560, y=250)
     total_label3.place_forget()
     total_label4.place_forget()
 def set3():
-    root.geometry("1200x550")
+    root.geometry("1200x575")
     rollZone2.place(x=450, y=75)  # Moving the second rollzone to its place
     rollZone3.place(x=850, y=75)
     rollZone4.place_forget() # temporarily remove roll zone 4
+    rollZone5.place_forget()
     roll_Button.place(x=535, y=325) # Moving all labels and buttons to the center of the window
     theme_button.place(x=435, y=285)
     theme_button2.place(x=635, y=285)
+    set_button1.place(x=535, y=385)
     set_button2.place(x=535, y=415)
     set_button3.place(x=535, y=445)
     set_button4.place(x=535, y=475)
     set_button5.place(x=535, y=505)
-    set_label.place(x=550, y=375)
+    set_label.place(x=550, y=350)
     total_label.place(x=150, y=250)
     total_label2.place(x=560, y=250)
     total_label3.place(x=960, y=250)
     total_label4.place_forget()
 def set4():
-    root.geometry("1200x550")
+    root.geometry("1200x575")
     rollZone2.place(x=450, y=75)
     rollZone3.place(x=850, y=75)
     rollZone4.place(x=450, y=275)
@@ -262,19 +290,20 @@ def set4():
     roll_Button.place(x=125, y=270) # Moving all labels and buttons to the center of the window
     theme_button.place(x=25, y=305)
     theme_button2.place(x=225, y=305)
+    set_button1.place(x=125, y=405)
     set_button2.place(x=125, y=435)
     set_button3.place(x=125, y=465)
     set_button4.place(x=125, y=495)
     set_button5.place(x=125, y=525)
     set_label.place(x=150, y=355)
-    total_label.place(x=150, y=235)
+    total_label.place(x=150, y=210)
     total_label2.place(x=560, y=235)
     total_label3.place(x=960, y=235)
     total_label4.place(x=560, y=435)
     total_label5.place_forget()
 
 def set5():
-    root.geometry("1200x550")
+    root.geometry("1200x575")
     rollZone2.place(x=450, y=75)
     rollZone3.place(x=850, y=75)
     rollZone4.place(x=450, y=275)
@@ -282,6 +311,7 @@ def set5():
     roll_Button.place(x=125, y=270) # Moving all labels and buttons to the center of the window
     theme_button.place(x=25, y=305)
     theme_button2.place(x=225, y=305)
+    set_button1.place(x=125, y=405)
     set_button2.place(x=125, y=435)
     set_button3.place(x=125, y=465)
     set_button4.place(x=125, y=495)
