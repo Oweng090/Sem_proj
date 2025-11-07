@@ -34,6 +34,7 @@ rollZone.place(x=50, y=75)
 rollZone2 = tk.Canvas(root, width=300, height=150, bg="blue", highlightthickness=2.5, highlightbackground="lime")
 rollZone3 = tk.Canvas(root, width=300, height=150, bg="blue", highlightthickness=2.5, highlightbackground="lime")
 rollZone4 = tk.Canvas(root, width=300, height=150, bg="blue", highlightthickness=2.5, highlightbackground="lime")
+rollZone5 = tk.Canvas(root, width=300, height=150, bg="blue", highlightthickness=2.5, highlightbackground="lime")
 # Make the squares for the dice
 Dice1 = rollZone.create_rectangle(169, 20, 292.5, 140, fill="white", outline="black")# Squares for the dice
 Dice2 = rollZone.create_rectangle(18.5, 20, 142.5, 140, fill="white", outline="black")
@@ -106,6 +107,16 @@ right4_dot3 = rollZone4.create_oval(0, 0, 0, 0, fil="black", outline="black")
 right4_dot4 = rollZone4.create_oval(0, 0, 0, 0, fil="black", outline="black")
 right4_dot5 = rollZone4.create_oval(0, 0, 0, 0, fil="black", outline="black")
 right4_dot6 = rollZone4.create_oval(0, 0, 0, 0, fil="black", outline="black")
+# Set 5 squares
+set5_dice1 = rollZone5.create_rectangle(169, 20, 292.5, 140, fill="white", outline="black")
+set5_dice2 = rollZone5.create_rectangle(18.5, 20, 142.5, 140, fill="white", outline="black")
+# Set 5 dots left
+left5_dot1 = rollZone5.create_oval(68.75, 64.75, 93.75, 89.75, fill="black", outline="black")
+left5_dot2 = rollZone5.create_oval(0, 0, 0, 0, fill="black", outline="black")
+left5_dot3 = rollZone5.create_oval(0, 0, 0, 0, fill="black", outline="black")
+left5_dot4 = rollZone5.create_oval(0, 0, 0, 0, fill="black", outline="black")
+left5_dot5 = rollZone5.create_oval(0, 0, 0, 0, fill="black", outline="black")
+left5_dot6 = rollZone5.create_oval(0, 0, 0, 0, fill="black", outline="black")
 # TODO: Buttons ====================================================================#
 # Roll Buttons
 roll_Button = tk.Button(root, text="Roll Dice", bg='lime', width=20, command=lambda: roll_dice("Roll!")) # defining a button for the GUI
