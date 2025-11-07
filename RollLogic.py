@@ -2,7 +2,7 @@
 Create a roll logic function to shorten code for gui dice roller
 """
 
-def rollLogicLeft(side, rollZone, dot):
+def rollLogic(side, rollZone, dot):
     if(side == 1):
         rollZone.coords(dot, 68.75, 64.75, 93.75, 89.75) # middle
         rollZone.coords(dot, 0, 0, 0, 0) # moving every dot back to 0s so when you roll multiple times it can still show one.
@@ -51,7 +51,7 @@ def rollLogicLeft(side, rollZone, dot):
         rollZone.coords(dot, 25.75, 24.25, 50.75, 49.25) # top left
         rollZone.coords(dot, 25.75, 64.75, 50.75, 89.75) # middle left
         rollZone.coords(dot, 113.75, 64.75, 138.75, 89.75) # middle right
-def rollLogicRight(side, rollZone, dot):
+"""def rollLogicRight(side, rollZone, dot):
     if(side == 1):
         rollZone.coords(dot, 220, 64.75, 245, 89.75) # middle
         rollZone.coords(dot, 0, 0, 0, 0)
@@ -93,4 +93,4 @@ def rollLogicRight(side, rollZone, dot):
         rollZone.coords(dot, 265, 110.25, 290, 135.25) # bottom right
         rollZone.coords(dot, 177, 24.25, 202, 49.25) # top left
         rollZone.coords(dot, 177, 64.75, 202, 89.75) # middle left
-        rollZone.coords(dot, 265, 64.75, 290, 89.75) # middle right
+        rollZone.coords(dot, 265, 64.75, 290, 89.75) # middle right"""

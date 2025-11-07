@@ -8,6 +8,9 @@
 # import tkinter for the Gui
 import tkinter as tk
 import random
+import RollLogic
+
+roll = RollLogic()
 
 #Create the individual window.
 root = tk.Tk()
@@ -147,9 +150,10 @@ root.configure(bg='grey')
 # create a function for the dice rolling
 def roll_dice(side):
     sides = [1, 2, 3, 4, 5, 6]
-    side = random.choice(sides) 
+    side = random.choice(sides)
+    roll(side, rollZone, left_dot1)
     # first dice rolling decision matrix
-    if (side == 1):  # Note: maybe build each dice face for each if scenario ( if side = 1 then build the dice with one dot.)
+    """if (side == 1):  # Note: maybe build each dice face for each if scenario ( if side = 1 then build the dice with one dot.)
         # the side will be 1
         rollZone.coords(left_dot1, 68.75, 64.75, 93.75, 89.75) # middle
         rollZone.coords(left_dot2, 0, 0, 0, 0) # moving every dot back to 0s so when you roll multiple times it can still show one.
@@ -197,7 +201,7 @@ def roll_dice(side):
         rollZone.coords(left_dot3, 113.75, 110.25, 138.75, 135.25) # bottom right
         rollZone.coords(left_dot4, 25.75, 24.25, 50.75, 49.25) # top left
         rollZone.coords(left_dot5, 25.75, 64.75, 50.75, 89.75) # middle left
-        rollZone.coords(left_dot6, 113.75, 64.75, 138.75, 89.75) # middle right
+        rollZone.coords(left_dot6, 113.75, 64.75, 138.75, 89.75) # middle right"""
     # second dice decision matrix
     side2 = random.choice(sides)
 
