@@ -117,6 +117,13 @@ left5_dot3 = rollZone5.create_oval(0, 0, 0, 0, fill="black", outline="black")
 left5_dot4 = rollZone5.create_oval(0, 0, 0, 0, fill="black", outline="black")
 left5_dot5 = rollZone5.create_oval(0, 0, 0, 0, fill="black", outline="black")
 left5_dot6 = rollZone5.create_oval(0, 0, 0, 0, fill="black", outline="black")
+# Set 5 right dots
+right5_dot1 = rollZone5.create_oval(220, 64.75, 245, 89.75, fill="black", outline="black")
+right5_dot2 = rollZone5.create_oval(0, 0, 0, 0, fill="black", outline="black")
+right5_dot3 = rollZone5.create_oval(0, 0, 0, 0, fill="black", outline="black")
+right5_dot4 = rollZone5.create_oval(0, 0, 0, 0, fill="black", outline="black")
+right5_dot5 = rollZone5.create_oval(0, 0, 0, 0, fill="black", outline="black")
+right5_dot6 = rollZone5.create_oval(0, 0, 0, 0, fill="black", outline="black")
 # TODO: Buttons ====================================================================#
 # Roll Buttons
 roll_Button = tk.Button(root, text="Roll Dice", bg='lime', width=20, command=lambda: roll_dice("Roll!")) # defining a button for the GUI
