@@ -160,7 +160,7 @@ def roll_dice(side):
     # Set 2
     set2_side1 = random.choice(sides)
     set2_side2 = random.choice(sides)
-    RollLogic.rollLogic(set2_side1,)
+    RollLogic.rollLogic(set2_side1,) # Continue this
 
     # Third set dice dicision Matrix
     set3_side = random.choice(sides)
