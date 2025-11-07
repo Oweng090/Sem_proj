@@ -10,7 +10,7 @@ import tkinter as tk
 import random
 import RollLogic
 
-roll = RollLogic.rollLogic()
+
 
 #Create the individual window.
 root = tk.Tk()
@@ -151,192 +151,16 @@ root.configure(bg='grey')
 def roll_dice(side):
     sides = [1, 2, 3, 4, 5, 6]
     side = random.choice(sides)
-    roll(side, rollZone, left_dot1, left_dot2, left_dot3, left_dot4, left_dot5, left_dot6)
+    RollLogic.rollLogic(side, rollZone, left_dot1, left_dot2, left_dot3, left_dot4, left_dot5, left_dot6)
     # first dice rolling decision matrix
-    """if (side == 1):  # Note: maybe build each dice face for each if scenario ( if side = 1 then build the dice with one dot.)
-        # the side will be 1
-        rollZone.coords(left_dot1, 68.75, 64.75, 93.75, 89.75) # middle
-        rollZone.coords(left_dot2, 0, 0, 0, 0) # moving every dot back to 0s so when you roll multiple times it can still show one.
-        rollZone.coords(left_dot3, 0, 0, 0, 0)
-        rollZone.coords(left_dot4, 0, 0, 0, 0)
-        rollZone.coords(left_dot5, 0, 0, 0, 0)
-        rollZone.coords(left_dot6, 0, 0, 0, 0)
-    elif(side == 2): # make some bug prevention ( move things to their original spot or to 0,0,0,0) (for when it goes froma high number to a low number.)
-        # the side will be 2
-        # Need to move left_dot2 and left_dot1 to show a classic 2 on the dice face
-        rollZone.coords(left_dot1, 25.75, 110.25, 50.75, 135.25) # for proportions have x1 and x2 25 apart and the same for y1 and 2
-        rollZone.coords(left_dot2, 113.75, 24.25, 138.75, 49.25)
-        rollZone.coords(left_dot3, 0, 0, 0, 0)
-        rollZone.coords(left_dot4, 0, 0, 0, 0)
-        rollZone.coords(left_dot5, 0, 0, 0, 0)
-        rollZone.coords(left_dot6, 0, 0, 0, 0)
-    elif(side == 3):
-        # the side will be 3
-        rollZone.coords(left_dot1, 68.75, 64.75, 93.75, 89.75)
-        rollZone.coords(left_dot2, 25.75, 110.25, 50.75, 135.25)
-        rollZone.coords(left_dot3, 113.75, 24.25, 138.75, 49.25)
-        rollZone.coords(left_dot4, 0, 0, 0, 0)
-        rollZone.coords(left_dot5, 0, 0, 0, 0)
-        rollZone.coords(left_dot6, 0, 0, 0, 0)
-    elif(side == 4):
-        #the side will be 4
-        rollZone.coords(left_dot1, 25.75, 110.25, 50.75, 135.25) # bottom left
-        rollZone.coords(left_dot2, 113.75, 24.25, 138.75, 49.25) # top right
-        rollZone.coords(left_dot3, 113.75, 110.25, 138.75, 135.25) # bottom right
-        rollZone.coords(left_dot4, 25.75, 24.25, 50.75, 49.25) # top left
-        rollZone.coords(left_dot5, 0, 0, 0, 0)
-        rollZone.coords(left_dot6, 0, 0, 0, 0)
-    elif(side == 5):
-        # the side will be 5
-        rollZone.coords(left_dot1, 25.75, 110.25, 50.75, 135.25) # bottom left
-        rollZone.coords(left_dot2, 113.75, 24.25, 138.75, 49.25) # top right
-        rollZone.coords(left_dot3, 113.75, 110.25, 138.75, 135.25) # bottom right
-        rollZone.coords(left_dot4, 25.75, 24.25, 50.75, 49.25) # top left
-        rollZone.coords(left_dot5, 68.75, 64.75, 93.75, 89.75) # middle
-        rollZone.coords(left_dot6, 0, 0, 0, 0)
-    else:
-        # the side will be 6
-        rollZone.coords(left_dot1, 25.75, 110.25, 50.75, 135.25) # bottom left
-        rollZone.coords(left_dot2, 113.75, 24.25, 138.75, 49.25) # top right
-        rollZone.coords(left_dot3, 113.75, 110.25, 138.75, 135.25) # bottom right
-        rollZone.coords(left_dot4, 25.75, 24.25, 50.75, 49.25) # top left
-        rollZone.coords(left_dot5, 25.75, 64.75, 50.75, 89.75) # middle left
-        rollZone.coords(left_dot6, 113.75, 64.75, 138.75, 89.75) # middle right"""
     # second dice decision matrix
     side2 = random.choice(sides)
 
-    if(side2 == 1):
-        rollZone.coords(right_dot1, 220, 64.75, 245, 89.75) # middle
-        rollZone.coords(right_dot2, 0, 0, 0, 0)
-        rollZone.coords(right_dot3, 0, 0, 0, 0)
-        rollZone.coords(right_dot4, 0, 0, 0, 0)
-        rollZone.coords(right_dot5, 0, 0, 0, 0)
-        rollZone.coords(right_dot6, 0, 0, 0, 0)
-    elif(side2 == 2):
-        rollZone.coords(right_dot1, 177, 110.25, 202, 135.25) # bottom left
-        rollZone.coords(right_dot2, 265, 24.25, 290, 49.25) # top right
-        rollZone.coords(right_dot3, 0, 0, 0, 0)
-        rollZone.coords(right_dot4, 0, 0, 0, 0)
-        rollZone.coords(right_dot5, 0, 0, 0, 0)
-        rollZone.coords(right_dot6, 0, 0, 0, 0)
-    elif(side2 == 3):
-        rollZone.coords(right_dot1, 177, 110.25, 202, 135.25)# bottom left
-        rollZone.coords(right_dot2, 265, 24.25, 290, 49.25) # top right
-        rollZone.coords(right_dot3, 220, 64.75, 245, 89.75) # middle
-        rollZone.coords(right_dot4, 0, 0, 0, 0)
-        rollZone.coords(right_dot5, 0, 0, 0, 0)
-        rollZone.coords(right_dot6, 0, 0, 0, 0)
-    elif(side2 == 4):
-        rollZone.coords(right_dot1, 177, 110.25, 202, 135.25) # bottom left
-        rollZone.coords(right_dot2, 265, 24.25, 290, 49.25) # top right
-        rollZone.coords(right_dot3, 265, 110.25, 290, 135.25) # bottom right
-        rollZone.coords(right_dot4, 177, 24.25, 202, 49.25) # top left
-        rollZone.coords(right_dot5, 0, 0, 0, 0)
-        rollZone.coords(right_dot6, 0, 0, 0, 0)
-    elif(side2 == 5):
-        rollZone.coords(right_dot1, 177, 110.25, 202, 135.25) # bottom left
-        rollZone.coords(right_dot2, 265, 24.25, 290, 49.25) # top right
-        rollZone.coords(right_dot3, 265, 110.25, 290, 135.25) # bottom right
-        rollZone.coords(right_dot4, 177, 24.25, 202, 49.25) # top left
-        rollZone.coords(right_dot5, 220, 64.75, 245, 89.75) # middle 
-        rollZone.coords(right_dot6, 0, 0, 0, 0)
-    else:
-        rollZone.coords(right_dot1, 177, 110.25, 202, 135.25) # bottom left
-        rollZone.coords(right_dot2, 265, 24.25, 290, 49.25) # top right
-        rollZone.coords(right_dot3, 265, 110.25, 290, 135.25) # bottom right
-        rollZone.coords(right_dot4, 177, 24.25, 202, 49.25) # top left
-        rollZone.coords(right_dot5, 177, 64.75, 202, 89.75) # middle left
-        rollZone.coords(right_dot6, 265, 64.75, 290, 89.75) # middle right
-    # Second Set First Dice logic
-    set2_side = random.choice(sides)
-
-    if set2_side == 1:
-        rollZone2.coords(left2_dot1, 68.75, 64.75, 93.75, 89.75) # middle
-        rollZone2.coords(left2_dot2, 0, 0, 0, 0) # moving every dot back to 0s so when you roll multiple times it can still show one.
-        rollZone2.coords(left2_dot3, 0, 0, 0, 0)
-        rollZone2.coords(left2_dot4, 0, 0, 0, 0)
-        rollZone2.coords(left2_dot5, 0, 0, 0, 0)
-        rollZone2.coords(left2_dot6, 0, 0, 0, 0)
-    elif set2_side == 2:
-        rollZone2.coords(left2_dot1, 25.75, 110.25, 50.75, 135.25) # Bottom left
-        rollZone2.coords(left2_dot2, 113.75, 24.25, 138.75, 49.25) # Top Right
-        rollZone2.coords(left2_dot3, 0, 0, 0, 0)
-        rollZone2.coords(left2_dot4, 0, 0, 0, 0)
-        rollZone2.coords(left2_dot5, 0, 0, 0, 0)
-        rollZone2.coords(left2_dot6, 0, 0, 0, 0)
-    elif set2_side == 3:
-        rollZone2.coords(left2_dot1, 68.75, 64.75, 93.75, 89.75)# Middle
-        rollZone2.coords(left2_dot2, 25.75, 110.25, 50.75, 135.25) # Bottom Left
-        rollZone2.coords(left2_dot3, 113.75, 24.25, 138.75, 49.25) # Top Right
-        rollZone2.coords(left2_dot4, 0, 0, 0, 0)
-        rollZone2.coords(left2_dot5, 0, 0, 0, 0)
-        rollZone2.coords(left2_dot6, 0, 0, 0, 0)
-    elif set2_side == 4:
-        rollZone2.coords(left2_dot1, 25.75, 24.25, 50.75, 49.25) # Top left
-        rollZone2.coords(left2_dot2, 113.75, 24.25, 138.75, 49.25) # Top Right
-        rollZone2.coords(left2_dot3, 25.75, 110.25, 50.75, 135.25) # Bottom left
-        rollZone2.coords(left2_dot4, 113.75, 110.25, 138.75, 135.25) # Bottom right
-        rollZone2.coords(left2_dot5, 0, 0, 0, 0)
-        rollZone2.coords(left2_dot6, 0, 0, 0, 0)
-    elif set2_side == 5: 
-        rollZone2.coords(left2_dot1, 68.75, 64.75, 93.75, 89.75) # Middle
-        rollZone2.coords(left2_dot2, 25.75, 24.25, 50.75, 49.25) # top left
-        rollZone2.coords(left2_dot3, 113.75, 24.25, 138.75, 49.25) # Top Right
-        rollZone2.coords(left2_dot4, 25.75, 110.25, 50.75, 135.25) # Bottom Left
-        rollZone2.coords(left2_dot5, 113.75, 110.25, 138.75, 135.25) # Bottom Right
-        rollZone2.coords(left2_dot6, 0, 0, 0, 0)
-    else:
-        rollZone2.coords(left2_dot1, 25.75, 24.25, 50.75, 49.25) # Top Left
-        rollZone2.coords(left2_dot2, 113.75, 24.25, 138.75, 49.25) # Top right
-        rollZone2.coords(left2_dot3, 25.75, 64.75, 50.75, 89.75) # Middle Left
-        rollZone2.coords(left2_dot4, 113.75, 64.75, 138.75, 89.75) # Middle Right
-        rollZone2.coords(left2_dot5, 25.75, 110.25, 50.75, 135.25) # Bottom Left
-        rollZone2.coords(left2_dot6, 113.75, 110.25, 138.75, 135.25) # Bottom Right
-
+    RollLogic.rollLogic2(side2, rollZone, right_dot1, right_dot2, right_dot3, right_dot4, right_dot5, right_dot6)
+    # Set 2
+    set2_side1 = random.choice(sides)
     set2_side2 = random.choice(sides)
-
-    if set2_side2 == 1:
-        rollZone2.coords(right2_dot1, 220, 64.75, 245, 89.75)
-        rollZone2.coords(right2_dot2, 0, 0, 0, 0)
-        rollZone2.coords(right2_dot3, 0, 0, 0, 0)
-        rollZone2.coords(right2_dot4, 0, 0, 0, 0)
-        rollZone2.coords(right2_dot5, 0, 0, 0, 0)
-        rollZone2.coords(right2_dot6, 0, 0, 0, 0)
-    elif set2_side2 == 2:
-        rollZone2.coords(right2_dot1, 177, 110.25, 202, 135.25) # bottom left
-        rollZone2.coords(right2_dot2, 265, 24.25, 290, 49.25) # top right
-        rollZone2.coords(right2_dot3, 0, 0, 0, 0)
-        rollZone2.coords(right2_dot4, 0, 0, 0, 0)
-        rollZone2.coords(right2_dot5, 0, 0, 0, 0)
-        rollZone2.coords(right2_dot6, 0, 0, 0, 0)
-    elif set2_side2 == 3: 
-        rollZone2.coords(right2_dot1, 177, 110.25, 202, 135.25)# bottom left
-        rollZone2.coords(right2_dot2, 265, 24.25, 290, 49.25) # top right
-        rollZone2.coords(right2_dot3, 220, 64.75, 245, 89.75) # middle
-        rollZone2.coords(right2_dot4, 0, 0, 0, 0)
-        rollZone2.coords(right2_dot5, 0, 0, 0, 0)
-        rollZone2.coords(right2_dot6, 0, 0, 0, 0)
-    elif set2_side2 == 4:
-        rollZone2.coords(right2_dot1, 177, 110.25, 202, 135.25) # bottom left
-        rollZone2.coords(right2_dot2, 265, 24.25, 290, 49.25) # top right
-        rollZone2.coords(right2_dot3, 265, 110.25, 290, 135.25) # bottom right
-        rollZone2.coords(right2_dot4, 177, 24.25, 202, 49.25) # top left
-        rollZone2.coords(right2_dot5, 0, 0, 0, 0)
-        rollZone2.coords(right2_dot6, 0, 0, 0, 0)
-    elif set2_side2 == 5:
-        rollZone2.coords(right2_dot1, 177, 110.25, 202, 135.25) # bottom left
-        rollZone2.coords(right2_dot2, 265, 24.25, 290, 49.25) # top right
-        rollZone2.coords(right2_dot3, 265, 110.25, 290, 135.25) # bottom right
-        rollZone2.coords(right2_dot4, 177, 24.25, 202, 49.25) # top left
-        rollZone2.coords(right2_dot5, 220, 64.75, 245, 89.75) # middle 
-        rollZone2.coords(right2_dot6, 0, 0, 0, 0)
-    else:
-        rollZone2.coords(right2_dot1, 177, 110.25, 202, 135.25) # bottom left
-        rollZone2.coords(right2_dot2, 265, 24.25, 290, 49.25) # top right
-        rollZone2.coords(right2_dot3, 265, 110.25, 290, 135.25) # bottom right
-        rollZone2.coords(right2_dot4, 177, 24.25, 202, 49.25) # top left
-        rollZone2.coords(right2_dot5, 177, 64.75, 202, 89.75) # middle left
-        rollZone2.coords(right2_dot6, 265, 64.75, 290, 89.75) # middle right
+    RollLogic.rollLogic(set2_side1,)
 
     # Third set dice dicision Matrix
     set3_side = random.choice(sides)
@@ -566,8 +390,8 @@ def roll_dice(side):
 
     total_roll = side + side2
     total_label.config(text=f"Total roll: {total_roll}")
-    total_roll2 = set2_side + set2_side2
-    total_label2.config(text=f"Total roll: {total_roll2}")
+    #total_roll2 = set2_side + set2_side2
+   # total_label2.config(text=f"Total roll: {total_roll2}")
     total_roll3 = set3_side + set3_side2
     total_label3.config(text=f"Total roll: {total_roll3}")
     total_roll4 = set4_side1 + set4_side2
