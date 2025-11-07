@@ -160,7 +160,7 @@ def roll_dice(side):
     # Set 2
     set2_side1 = random.choice(sides)
     set2_side2 = random.choice(sides)
-    RollLogic.rollLogic(set2_side1,) # Continue this
+    RollLogic.rollLogic(set2_side1, rollZone2, left2_dot1, left2_dot2, left2_dot3, left2_dot4, left2_dot5, left2_dot6) 
 
     # Third set dice dicision Matrix
     set3_side = random.choice(sides)
@@ -390,8 +390,8 @@ def roll_dice(side):
 
     total_roll = side + side2
     total_label.config(text=f"Total roll: {total_roll}")
-    #total_roll2 = set2_side + set2_side2
-   # total_label2.config(text=f"Total roll: {total_roll2}")
+    total_roll2 = set2_side1 + set2_side2
+    total_label2.config(text=f"Total roll: {total_roll2}")
     total_roll3 = set3_side + set3_side2
     total_label3.config(text=f"Total roll: {total_roll3}")
     total_roll4 = set4_side1 + set4_side2
