@@ -39,6 +39,7 @@ rollZone2 = tk.Canvas(root, width=300, height=150, bg="blue", highlightthickness
 rollZone3 = tk.Canvas(root, width=300, height=150, bg="blue", highlightthickness=2.5, highlightbackground="lime")
 rollZone4 = tk.Canvas(root, width=300, height=150, bg="blue", highlightthickness=2.5, highlightbackground="lime")
 rollZone5 = tk.Canvas(root, width=300, height=150, bg="blue", highlightthickness=2.5, highlightbackground="lime")
+rollZone6 = tk.Canvas(root, width=300, hieght=150, bg="blue", highlightthickness=2.5, highlightbackground="lime")
 # Make the squares for the dice
 Dice1 = rollZone.create_rectangle(169, 20, 292.5, 140, fill="white", outline="black")# Squares for the dice
 Dice2 = rollZone.create_rectangle(18.5, 20, 142.5, 140, fill="white", outline="black")
@@ -128,6 +129,23 @@ right5_dot3 = rollZone5.create_oval(0, 0, 0, 0, fill="black", outline="black")
 right5_dot4 = rollZone5.create_oval(0, 0, 0, 0, fill="black", outline="black")
 right5_dot5 = rollZone5.create_oval(0, 0, 0, 0, fill="black", outline="black")
 right5_dot6 = rollZone5.create_oval(0, 0, 0, 0, fill="black", outline="black")
+# set 6 dice
+set6_dice1 = rollZone6.create_rectangle(169, 20, 292.5, 140, fill="white", outline="black")
+set6_dice2 = rollZone6.create_rectangle(18.5, 20, 142.5, 140, fill="white", outline="black")
+# set 6 dots
+left6_dot1 = rollZone6.create_oval(68.75, 64.75, 93.75, 89.75, fill="black", outline="black")
+left6_dot2 = rollZone6.create_oval(0, 0, 0, 0, fill="black", outline="black")
+left6_dot3 = rollZone6.create_oval(0, 0, 0, 0, fill="black", outline="black")
+left6_dot4 = rollZone6.create_oval(0, 0, 0, 0, fill="black", outline="black")
+left6_dot5 = rollZone6.create_oval(0, 0, 0, 0, fill="black", outline="black")
+left6_dot6 = rollZone6.create_oval(0, 0, 0, 0, fill="black", outline="black")
+# right
+right6_dot1 = rollZone6.create_oval(220, 64.75, 245, 89.75, fill="black", outline="black")
+right6_dot2 = rollZone6.create_oval(0, 0, 0, 0, fill="black", outline="black")
+right6_dot3 = rollZone6.create_oval(0, 0, 0, 0, fill="black", outline="black")
+right6_dot4 = rollZone6.create_oval(0, 0, 0, 0, fill="black", outline="black")
+right6_dot5 = rollZone6.create_oval(0, 0, 0, 0, fill="black", outline="black")
+right6_dot6 = rollZone6.create_oval(0, 0, 0, 0, fill="black", outline="black")
 # TODO: Buttons ====================================================================#
 # Roll Buttons
 roll_Button = tk.Button(root, text="Roll Dice", bg='lime', width=20, command=lambda: roll_dice("Roll!")) # defining a button for the GUI
@@ -175,15 +193,19 @@ def roll_dice(side):
     # Set 4
     set4_side1 = random.choice(sides)
     set4_side2 = random.choice(sides)
-
     RollLogic.rollLogic(set4_side1, rollZone4, left4_dot1, left4_dot2, left4_dot3, left4_dot4, left4_dot5, left4_dot6)
     RollLogic.rollLogic2(set4_side2, rollZone4, right4_dot1, right4_dot2, right4_dot3, right4_dot4, right4_dot5, right4_dot6)
-
+    # Set 5
     set5_side1 = random.choice(sides)
     set5_side2 = random.choice(sides)
-
     RollLogic.rollLogic(set5_side1, rollZone5, left5_dot1, left5_dot2, left5_dot3, left5_dot4, left5_dot5, left5_dot6)
     RollLogic.rollLogic2(set5_side2, rollZone5, right5_dot1, right5_dot2, right5_dot3, right5_dot4, right5_dot5, right5_dot6)
+    # Set 6
+    set6_side1 = random.choice(sides)
+    set6_side2 = random.choice(sides)
+    RollLogic.rollLogic(set6_side1, rollZone6, left6_dot1, left6_dot2, left6_dot3, left6_dot4, left6_dot5, left6_dot6)
+    RollLogic.rollLogic2(set6_side2, rollZone6, right6_dot1, right6_dot2, right6_dot3, right6_dot4, right6_dot5, right6_dot6)
+
 
     total_roll = side + side2
     total_label.config(text=f"Total roll: {total_roll}")
