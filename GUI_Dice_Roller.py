@@ -39,7 +39,7 @@ rollZone2 = tk.Canvas(root, width=300, height=150, bg="blue", highlightthickness
 rollZone3 = tk.Canvas(root, width=300, height=150, bg="blue", highlightthickness=2.5, highlightbackground="lime")
 rollZone4 = tk.Canvas(root, width=300, height=150, bg="blue", highlightthickness=2.5, highlightbackground="lime")
 rollZone5 = tk.Canvas(root, width=300, height=150, bg="blue", highlightthickness=2.5, highlightbackground="lime")
-rollZone6 = tk.Canvas(root, width=300, hieght=150, bg="blue", highlightthickness=2.5, highlightbackground="lime")
+rollZone6 = tk.Canvas(root, width=300, height=150, bg="blue", highlightthickness=2.5, highlightbackground="lime")
 # Make the squares for the dice
 Dice1 = rollZone.create_rectangle(169, 20, 292.5, 140, fill="white", outline="black")# Squares for the dice
 Dice2 = rollZone.create_rectangle(18.5, 20, 142.5, 140, fill="white", outline="black")
