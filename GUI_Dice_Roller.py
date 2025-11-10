@@ -9,6 +9,7 @@
 import tkinter as tk
 import random
 import RollLogic
+import sv_ttk
 
 
 
@@ -171,6 +172,7 @@ set_button6.place(x=125, y=535)
 #===================================================================================#
 root.title("Dice!")
 root.iconbitmap("Dice.ico") # Dice icon at top of screen
+sv_ttk.set_theme("light")
 root.geometry("400x575")
 root.configure(bg='grey')
 # create a function for the dice rolling
