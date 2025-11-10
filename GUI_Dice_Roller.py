@@ -170,6 +170,7 @@ set_button6 = tk.Button(root, text="6 Sets", bg="lime", width=20, command=lambda
 set_button6.place(x=125, y=535)
 #===================================================================================#
 root.title("Dice!")
+root.iconbitmap("Dice.ico") # Dice icon at top of screen
 root.geometry("400x575")
 root.configure(bg='grey')
 # create a function for the dice rolling
