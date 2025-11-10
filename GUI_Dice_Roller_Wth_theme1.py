@@ -51,6 +51,7 @@ theme_button = tk.Button(root, text="Theme 1", bg="#3E3E3E",fg="#FFFFFF", width=
 theme_button.place(x=125, y=285)
 
 root.title("Dice!")
+root.iconbitmap("Dice.ico")
 root.geometry("400x400") # temporary window sizeot
 root.configure(bg='grey')
 # create a function for the dice rolling
