@@ -230,11 +230,15 @@ def theme_1():
     rollZone2.config(bg="#FFFB00", highlightbackground="#000000")
     rollZone3.config(bg="#FFFB00", highlightbackground="#000000")
     rollZone4.config(bg="#FFFB00", highlightbackground="#000000")
+    rollZone5.config(bg="#FFFB00", highlightbackground="#000000")
+    rollZone6.config(bg="#FFFB00", highlightbackground="#000000")
     label.config(bg="#FF0000") # making label match backround
     total_label.config(bg="#FF0000")
     total_label2.config(bg="#FF0000")
     total_label3.config(bg="#FF0000")
     total_label4.config(bg="#FF0000")
+    total_label5.config(bg="#FF0000")
+    #total_label6.config(bg="#FF0000")
     set_label.config(bg="#FF0000")  
 # Function for theme button 2.
 def theme_2():
@@ -243,11 +247,14 @@ def theme_2():
     rollZone2.config(bg="#808080", highlightbackground="#000000")
     rollZone3.config(bg="#808080", highlightbackground="#000000")
     rollZone4.config(bg="#808080", highlightbackground="#000000")
+    rollZone5.config(bg="#808080", highlightbackground="#000000")
+    rollZone6.config(bg="#808080", highlightbackground="#000000")
     label.config(bg="#AAAAAA")
     total_label.config(bg="#AAAAAA")
     total_label2.config(bg="#AAAAAA")
     total_label3.config(bg="#AAAAAA")
     total_label4.config(bg="#AAAAAA")
+    total_label5.config(bg="#AAAAAA")
     set_label.config(bg="#AAAAAA")
 
 def set1():
@@ -256,6 +263,7 @@ def set1():
     rollZone3.place_forget()
     rollZone4.place_forget()
     rollZone5.place_forget()
+    rollZone6.place_forget()
     roll_Button.place(x=125, y=250)
     theme_button.place(x=25, y=285)
     theme_button2.place(x=225, y=285)
@@ -277,6 +285,7 @@ def set2():
     rollZone3.place_forget()
     rollZone4.place_forget()
     rollZone5.place_forget()
+    rollZone6.place_forget()
     roll_Button.place(x=325, y=250) # Moving all labels and buttons to the center of the window
     theme_button.place(x=225, y=285)
     theme_button2.place(x=425, y=285)
@@ -297,6 +306,7 @@ def set3():
     rollZone3.place(x=850, y=75)
     rollZone4.place_forget() # temporarily remove roll zone 4
     rollZone5.place_forget()
+    rollZone6.place_forget()
     roll_Button.place(x=535, y=325) # Moving all labels and buttons to the center of the window
     theme_button.place(x=435, y=285)
     theme_button2.place(x=635, y=285)
@@ -317,6 +327,7 @@ def set4():
     rollZone3.place(x=850, y=75)
     rollZone4.place(x=450, y=275)
     rollZone5.place_forget()
+    rollZone6.place_forget()
     roll_Button.place(x=125, y=270) # Moving all labels and buttons to the center of the window
     theme_button.place(x=25, y=305)
     theme_button2.place(x=225, y=305)
@@ -338,6 +349,7 @@ def set5():
     rollZone3.place(x=850, y=75)
     rollZone4.place(x=450, y=275)
     rollZone5.place(x=850, y=275)
+    rollZone6.place_forget()
     roll_Button.place(x=125, y=270) # Moving all labels and buttons to the center of the window
     theme_button.place(x=25, y=305)
     theme_button2.place(x=225, y=305)
