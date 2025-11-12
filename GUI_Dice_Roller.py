@@ -12,12 +12,14 @@ import RollLogic
 import sv_ttk
 
 
-
+fullscreenstatus = False
+root = None
 #Create the individual window.
 root = tk.Tk()
 root.title("Dice!")
 root.iconbitmap("Dice.ico") # Dice icon at top of screen
 sv_ttk.set_theme("light")
+root.bind("<Escape>", root.attributes("-fullscreen", False))
 root.geometry("400x575")
 root.configure(bg='grey')
 
@@ -153,6 +155,9 @@ right6_dot4 = rollZone6.create_oval(0, 0, 0, 0, fill="black", outline="black")
 right6_dot5 = rollZone6.create_oval(0, 0, 0, 0, fill="black", outline="black")
 right6_dot6 = rollZone6.create_oval(0, 0, 0, 0, fill="black", outline="black")
 # TODO: Buttons ====================================================================#
+# Full Screen button
+fullButton = tk.Button(root, text="Fullscreen Toggle", bg="blue", width=20, command=lambda: fullScreen())
+fullButton.place(x=125, y=350)
 # Roll Buttons
 roll_Button = tk.Button(root, text="Roll Dice", bg='lime', width=20, command=lambda: roll_dice("Roll!")) # defining a button for the GUI
 roll_Button.place(x=125, y=250) # making it so the program displays the button where i need it.
@@ -223,6 +228,11 @@ def roll_dice(side):
     total_label4.config(text=f"Total roll: {total_roll4}")
     total_roll5 = set5_side1 + set5_side2
     total_label5.config(text=f"Total roll: {total_roll5}")
+# Function for fullscreen
+def fullScreen():
+    global fullscreenstatus, root
+    fullscreenstatus = not fullscreenstatus
+    root.attributes('-fullscreen', fullscreenstatus)
 # Function for the theme 1 button 
 def theme_1():
     root.configure(bg="#FF0000") # Making window red
