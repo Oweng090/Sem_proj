@@ -4,14 +4,12 @@
   Created: 
   Purpose: Roll a dice as its own little Gui window
 """
-
 # import tkinter for the Gui
 import tkinter as tk
 import random
 import RollLogic
 import sv_ttk
-
-
+# Fulscreen stuff
 fullscreenstatus = False
 root = None
 #Create the individual window.
@@ -22,24 +20,19 @@ sv_ttk.set_theme("light")
 root.bind("<Escape>", root.attributes("-fullscreen", False))
 root.geometry("400x575")
 root.configure(bg='grey')
-
 # TODO: Labels! ----------------------------------------------------------------------#
 label = tk.Label(root, text="Dice Roll!", bg='grey', font=("Arial", 14)) # Title
 label.pack(pady=20)
-
 total_label = tk.Label(root, text=" ", bg='grey', font=("Arial", 14)) # label for the total of the rolls.
 total_label.place(x=150, y=345)
 total_label2 = tk.Label(root, text=" ", bg="grey", font=("Arial", 14))# Label for the second sets total
 total_label3 = tk.Label(root, text=" ", bg="grey", font=("Arial", 14))
 total_label4 = tk.Label(root, text=" ", bg="grey", font=("Arial", 14))
 total_label5 = tk.Label(root, text=" ", bg="grey", font=("Arial", 14))
-
 set_label = tk.Label(root, text="More Sets?", bg="grey", font=("Arial", 14))  
 set_label.place(x=150, y=350)
-
 # TODO: Dice visuals ==================================================================#
 # Make an area to make squares for the dice and the dots
-
 rollZone = tk.Canvas(root, width=300, height=150, bg="blue", highlightthickness=2.5, highlightbackground="lime") 
 rollZone.pack()
 rollZone.place(x=50, y=75)
@@ -51,7 +44,6 @@ rollZone6 = tk.Canvas(root, width=300, height=150, bg="blue", highlightthickness
 # Make the squares for the dice
 Dice1 = rollZone.create_rectangle(169, 20, 292.5, 140, fill="white", outline="black")# Squares for the dice
 Dice2 = rollZone.create_rectangle(18.5, 20, 142.5, 140, fill="white", outline="black")
-
 # Dots to sart with and for the 1 on the dice
 left_dot1 = rollZone.create_oval(68.75, 64.75, 93.75, 89.75, fill="black", outline="black") # needs centered.
 right_dot1 = rollZone.create_oval(220, 64.75, 245, 89.75, fill="black", outline="black") 
@@ -180,7 +172,6 @@ set_button5.place(x=125, y=505)
 set_button6 = tk.Button(root, text="6 Sets", bg="lime", width=20, command=lambda: set6())
 set_button6.place(x=125, y=535)
 #===================================================================================#
-
 # create a function for the dice rolling
 def roll_dice(side):
     # Set 1
@@ -189,13 +180,11 @@ def roll_dice(side):
     RollLogic.rollLogic(side, rollZone, left_dot1, left_dot2, left_dot3, left_dot4, left_dot5, left_dot6)
     side2 = random.choice(sides)
     RollLogic.rollLogic2(side2, rollZone, right_dot1, right_dot2, right_dot3, right_dot4, right_dot5, right_dot6)
-
     # Set 2
     set2_side1 = random.choice(sides)
     set2_side2 = random.choice(sides)
     RollLogic.rollLogic(set2_side1, rollZone2, left2_dot1, left2_dot2, left2_dot3, left2_dot4, left2_dot5, left2_dot6)
     RollLogic.rollLogic2(set2_side2, rollZone2, right2_dot1, right2_dot2, right2_dot3, right2_dot4, right2_dot5, right2_dot6) 
-
     # Set 3
     set3_side = random.choice(sides)
     set3_side2 = random.choice(sides)
@@ -216,8 +205,7 @@ def roll_dice(side):
     set6_side2 = random.choice(sides)
     RollLogic.rollLogic(set6_side1, rollZone6, left6_dot1, left6_dot2, left6_dot3, left6_dot4, left6_dot5, left6_dot6)
     RollLogic.rollLogic2(set6_side2, rollZone6, right6_dot1, right6_dot2, right6_dot3, right6_dot4, right6_dot5, right6_dot6)
-
-
+    # Total labels
     total_roll = side + side2
     total_label.config(text=f"Total roll: {total_roll}")
     total_roll2 = set2_side1 + set2_side2
@@ -266,7 +254,6 @@ def theme_2():
     total_label4.config(bg="#AAAAAA")
     total_label5.config(bg="#AAAAAA")
     set_label.config(bg="#AAAAAA")
-
 def set1():
     root.geometry("400x575")
     rollZone2.place_forget()
@@ -288,7 +275,6 @@ def set1():
     total_label3.place_forget()
     total_label4.place_forget()
     total_label5.place_forget()
-
 def set2():
     root.geometry("800x575") # making window bigger for second set of dice
     rollZone2.place(x=450, y=75) # Moving the second rollzone to its place
@@ -352,7 +338,6 @@ def set4():
     total_label3.place(x=960, y=235)
     total_label4.place(x=560, y=435)
     total_label5.place_forget()
-
 def set5():
     root.geometry("1200x575")
     rollZone2.place(x=450, y=75)
