@@ -5,7 +5,7 @@
   Purpose: Roll a dice as its own little Gui window
 """
 # import tkinter for the Gui
-from tkinter import *
+import tkinter as tk
 #from tkinter.ttk import *
 import random
 import RollLogic
@@ -16,41 +16,48 @@ import RollLogic
     #return self.root.attributes("-fullscreen", False)
 # Create class
 fullscreenstatus = False
-root = None
+root = tk.Tk()
+root.update_idletasks()
+width = 400
+height = 575
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
+x = (screen_width - width) // 2
+y = (screen_height - height) // 2
 class DiceRoller:
     def __init__(self):
-        self.root = Tk()
+        self.root = root
         self.root.title("Dice!")
         self.root.iconbitmap("Dice.ico") # Dice icon at top of screen
         #sv_ttk.set_theme("dark")
-        self.root.geometry("400x575")
+        self.root.geometry(f"{width}x{height}+{x}+{y}")
         self.root.configure(background='grey')
         self.widgets()
         self.root.mainloop()
 # TODO: Labels! ----------------------------------------------------------------------#
 # Create widgets
     def widgets(self):
-        self.label = Label(self.root, text="Dice Roll!", font=("Arial", 14), background='grey') # Title
+        self.label = tk.Label(self.root, text="Dice Roll!", font=("Arial", 14), background='grey') # Title
         self.label.pack(pady=20)
-        self.total_label = Label(self.root, text="Total roll: ", background='grey', font=("Arial", 14)) # label for the total of the rolls.
+        self.total_label = tk.Label(self.root, text="Total roll: ", background='grey', font=("Arial", 14)) # label for the total of the rolls.
         self.total_label.place(x=150, y=315)
-        self.total_label2 = Label(self.root, text="Total roll: ", background="grey", font=("Arial", 14))# Label for the second sets total
-        self.total_label3 = Label(self.root, text="Total roll: ", background="grey", font=("Arial", 14))
-        self.total_label4 = Label(self.root, text="Total roll: ", background="grey", font=("Arial", 14))
-        self.total_label5 = Label(self.root, text="Total roll: ", background="grey", font=("Arial", 14))
-        self.total_label6 = Label(self.root, text="Total roll: ", background="grey", font=("Arial", 14))
+        self.total_label2 = tk.Label(self.root, text="Total roll: ", background="grey", font=("Arial", 14))# Label for the second sets total
+        self.total_label3 = tk.Label(self.root, text="Total roll: ", background="grey", font=("Arial", 14))
+        self.total_label4 = tk.Label(self.root, text="Total roll: ", background="grey", font=("Arial", 14))
+        self.total_label5 = tk.Label(self.root, text="Total roll: ", background="grey", font=("Arial", 14))
+        self.total_label6 = tk.Label(self.root, text="Total roll: ", background="grey", font=("Arial", 14))
         #self.set_label = Label(self.root, text="More Sets?", background="grey", font=("Arial", 14))  
         #self.set_label.place(x=150, y=350)
 # TODO: Dice visuals ==================================================================#
 # Make an area to make squares for the dice and the dots
-        self.rollZone = Canvas(self.root, width=300, height=150, background="blue", highlightthickness=2.5, highlightbackground="lime") 
+        self.rollZone = tk.Canvas(self.root, width=300, height=150, background="blue", highlightthickness=2.5, highlightbackground="lime") 
         self.rollZone.pack()
         self.rollZone.place(x=50, y=75)
-        self.rollZone2 = Canvas(self.root, width=300, height=150, background="blue", highlightthickness=2.5, highlightbackground="lime")
-        self.rollZone3 = Canvas(self.root, width=300, height=150, background="blue", highlightthickness=2.5, highlightbackground="lime")
-        self.rollZone4 = Canvas(self.root, width=300, height=150, background="blue", highlightthickness=2.5, highlightbackground="lime")
-        self.rollZone5 = Canvas(self.root, width=300, height=150, background="blue", highlightthickness=2.5, highlightbackground="lime")
-        self.rollZone6 = Canvas(self.root, width=300, height=150, background="blue", highlightthickness=2.5, highlightbackground="lime")
+        self.rollZone2 = tk.Canvas(self.root, width=300, height=150, background="blue", highlightthickness=2.5, highlightbackground="lime")
+        self.rollZone3 = tk.Canvas(self.root, width=300, height=150, background="blue", highlightthickness=2.5, highlightbackground="lime")
+        self.rollZone4 = tk.Canvas(self.root, width=300, height=150, background="blue", highlightthickness=2.5, highlightbackground="lime")
+        self.rollZone5 = tk.Canvas(self.root, width=300, height=150, background="blue", highlightthickness=2.5, highlightbackground="lime")
+        self.rollZone6 = tk.Canvas(self.root, width=300, height=150, background="blue", highlightthickness=2.5, highlightbackground="lime")
 # Make the squares for the dice
         self.Dice1 = self.rollZone.create_rectangle(169, 20, 292.5, 140, fill="white", outline="black")# Squares for the dice
         self.Dice2 = self.rollZone.create_rectangle(18.5, 20, 142.5, 140, fill="white", outline="black")
@@ -161,25 +168,25 @@ class DiceRoller:
         #self.fullButton = Button(self.root, text="Fullscreen Toggle", bg="blue", width=20, command=lambda: self.fullScreen())
         #self.fullButton.place(x=125, y=350)
 # Roll Buttons
-        self.roll_Button = Button(self.root, text="Roll Dice", bg="lime", width=20, command=lambda: self.roll_dice()) # defining a button for the GUI
+        self.roll_Button = tk.Button(self.root, text="Roll Dice", bg="lime", width=20, command=lambda: self.roll_dice()) # defining a button for the GUI
         self.roll_Button.place(x=125, y=250) # making it so the program displays the button where i need it.
 # Theme Buttons
-        self.theme_button = Button(self.root, text="Theme 1", bg="#5A5A5A", fg="white", width=20, command=lambda: self.theme_1())
+        self.theme_button = tk.Button(self.root, text="Theme 1", bg="#5A5A5A", fg="white", width=20, command=lambda: self.theme_1())
         self.theme_button.place(x=25, y=285)
-        self.theme_button2 = Button(self.root, text="Theme 2",bg="#5A5A5A", fg="white", width=20, command=lambda: self.theme_2())
+        self.theme_button2 = tk.Button(self.root, text="Theme 2",bg="#5A5A5A", fg="white", width=20, command=lambda: self.theme_2())
         self.theme_button2.place(x=225, y=285)
 # Set Buttons
-        self.set_button1 = Button(self.root, text="1 Set", bg="lime", width=20, command=lambda: self.set1())
+        self.set_button1 = tk.Button(self.root, text="1 Set", bg="lime", width=20, command=lambda: self.set1())
         self.set_button1.place(x=125, y=385)
-        self.set_button2 = Button(self.root, text="2 Sets", bg="lime", width=20, command=lambda: self.set2())
+        self.set_button2 = tk.Button(self.root, text="2 Sets", bg="lime", width=20, command=lambda: self.set2())
         self.set_button2.place(x=125, y=415)
-        self.set_button3 = Button(self.root, text="3 Sets", bg="lime", width=20, command=lambda: self.set3())
+        self.set_button3 = tk.Button(self.root, text="3 Sets", bg="lime", width=20, command=lambda: self.set3())
         self.set_button3.place(x=125, y=445)
-        self.set_button4 = Button(self.root, text="4 Sets", bg="lime", width=20, command=lambda: self.set4())
+        self.set_button4 = tk.Button(self.root, text="4 Sets", bg="lime", width=20, command=lambda: self.set4())
         self.set_button4.place(x=125, y=475)
-        self.set_button5 = Button(self.root, text="5 Sets", bg="lime", width=20, command=lambda: self.set5())
+        self.set_button5 = tk.Button(self.root, text="5 Sets", bg="lime", width=20, command=lambda: self.set5())
         self.set_button5.place(x=125, y=505)
-        self.set_button6 = Button(self.root, text="6 Sets", bg="lime", width=20, command=lambda: self.set6())
+        self.set_button6 = tk.Button(self.root, text="6 Sets", bg="lime", width=20, command=lambda: self.set6())
         self.set_button6.place(x=125, y=535)
         # -------- KEYBINDS -----------------#
         self.root.bind("<f>", self.fullScreen)
