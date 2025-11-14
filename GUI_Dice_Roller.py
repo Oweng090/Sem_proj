@@ -181,6 +181,7 @@ class DiceRoller:
         self.set_button5.place(x=125, y=505)
         self.set_button6 = Button(self.root, text="6 Sets", bg="lime", width=20, command=lambda: self.set6())
         self.set_button6.place(x=125, y=535)
+        # -------- KEYBINDS -----------------#
         self.root.bind("<f>", self.fullScreen)
         self.root.bind("<Escape>", self.close)
 #===================================================================================#
