@@ -184,9 +184,10 @@ class DiceRoller:
         # -------- KEYBINDS -----------------#
         self.root.bind("<f>", self.fullScreen)
         self.root.bind("<Escape>", self.close)
+        self.root.bind("<KP_Enter>", self.roll_dice)
 #===================================================================================#
 # create a function for the dice rolling
-    def roll_dice(self):
+    def roll_dice(self, *args):
         # Set 1
         self.sides = [1, 2, 3, 4, 5, 6]
         self.side = random.choice(self.sides)
@@ -250,6 +251,7 @@ class DiceRoller:
         self.root.attributes('-fullscreen', fullscreenstatus)
     def close(self, *args):
         self.root.destroy()
+   
     # Function for the theme 1 button 
     def theme_1(self):
         self.root.configure(background="#FF0000") # Making window red
@@ -265,6 +267,7 @@ class DiceRoller:
         self.total_label3.config(background="#FF0000")
         self.total_label4.config(background="#FF0000")
         self.total_label5.config(background="#FF0000")
+        self.total_label6.config(background="#FF0000")
         #total_label6.config(background=="#FF0000")
         #self.set_label.config(background="#FF0000")  
     # Function for theme button 2.
@@ -282,6 +285,7 @@ class DiceRoller:
         self.total_label3.config(background="#AAAAAA")
         self.total_label4.config(background="#AAAAAA")
         self.total_label5.config(background="#AAAAAA")
+        self.total_label6.config(background="#AAAAAA")
         #self.set_label.config(background="#AAAAAA")
     def set1(self):
         self.root.geometry("400x575")
