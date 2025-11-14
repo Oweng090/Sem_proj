@@ -184,6 +184,13 @@ class DiceRoller:
         # -------- KEYBINDS -----------------#
         self.root.bind("<f>", self.fullScreen)
         self.root.bind("<Escape>", self.close)
+        self.root.bind("<Return>", self.roll_dice)
+        self.root.bind("<Key-1>", self.set1)
+        self.root.bind("<Key-2>", self.set2)
+        self.root.bind("<Key-3>", self.set3)
+        self.root.bind("<Key-4>", self.set4)
+        self.root.bind("<Key-5>", self.set5)
+        self.root.bind("<Key-6>", self.set6)
 #===================================================================================#
 # create a function for the dice rolling
     def roll_dice(self, *args):
@@ -285,7 +292,7 @@ class DiceRoller:
         self.total_label5.config(background="#AAAAAA")
         self.total_label6.config(background="#AAAAAA")
         #self.set_label.config(background="#AAAAAA")
-    def set1(self):
+    def set1(self, *args):
         self.root.geometry("400x575")
         self.rollZone2.place_forget()
         self.rollZone3.place_forget()
@@ -308,7 +315,7 @@ class DiceRoller:
         self.total_label4.place_forget()
         self.total_label5.place_forget()
         self.total_label6.place_forget()
-    def set2(self):
+    def set2(self, *args):
         self.root.geometry("800x575") # making window bigger for second set of dice
         self.rollZone2.place(x=450, y=75) # Moving the second rollzone to its place
         self.rollZone3.place_forget()
@@ -331,7 +338,7 @@ class DiceRoller:
         self.total_label4.place_forget()
         self.total_label5.place_forget()
         self.total_label6.place_forget()
-    def set3(self):
+    def set3(self, *args):
         self.root.geometry("1200x575")
         self.rollZone2.place(x=450, y=75)  # Moving the second rollzone to its place
         self.rollZone3.place(x=850, y=75)
@@ -354,7 +361,7 @@ class DiceRoller:
         self.total_label4.place_forget()
         self.total_label5.place_forget()
         self.total_label6.place_forget()
-    def set4(self):
+    def set4(self, *args):
         self.root.geometry("1200x575")
         self.rollZone2.place(x=450, y=75)
         self.rollZone3.place(x=850, y=75)
@@ -377,7 +384,7 @@ class DiceRoller:
         self.total_label4.place(x=560, y=435)
         self.total_label5.place_forget()
         self.total_label6.place_forget()
-    def set5(self):
+    def set5(self, *args):
         self.root.geometry("1200x575")
         self.rollZone2.place(x=450, y=75)
         self.rollZone3.place(x=850, y=75)
@@ -400,7 +407,7 @@ class DiceRoller:
         self.total_label4.place(x=560, y=435)
         self.total_label5.place(x=960, y=435)
         self.total_label6.place_forget()
-    def set6(self):
+    def set6(self, *args):
         self.root.geometry("1200x675")
         self.rollZone2.place(x=450, y=75)
         self.rollZone3.place(x=850, y=75)
