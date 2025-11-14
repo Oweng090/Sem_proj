@@ -184,7 +184,6 @@ class DiceRoller:
         # -------- KEYBINDS -----------------#
         self.root.bind("<f>", self.fullScreen)
         self.root.bind("<Escape>", self.close)
-        self.root.bind("<KP_Enter>", self.roll_dice)
 #===================================================================================#
 # create a function for the dice rolling
     def roll_dice(self, *args):
@@ -251,7 +250,6 @@ class DiceRoller:
         self.root.attributes('-fullscreen', fullscreenstatus)
     def close(self, *args):
         self.root.destroy()
-   
     # Function for the theme 1 button 
     def theme_1(self):
         self.root.configure(background="#FF0000") # Making window red
