@@ -190,34 +190,46 @@ class DiceRoller:
         # Set 1
         self.sides = [1, 2, 3, 4, 5, 6]
         self.side = random.choice(self.sides)
-        RollLogic.rollLogic(self.side, self.rollZone, self.left_dot1, self.left_dot2, self.left_dot3, self.left_dot4, self.left_dot5, self.left_dot6)
+        RollLogic.rollLogic(self.side, self.rollZone, self.left_dot1, self.left_dot2, self.left_dot3, self.left_dot4, self.left_dot5,
+                             self.left_dot6)
         self.side2 = random.choice(self.sides)
-        RollLogic.rollLogic2(self.side2, self.rollZone, self.right_dot1, self.right_dot2, self.right_dot3, self.right_dot4, self.right_dot5, self.right_dot6)
+        RollLogic.rollLogic2(self.side2, self.rollZone, self.right_dot1, self.right_dot2, self.right_dot3, self.right_dot4, 
+                             self.right_dot5, self.right_dot6)
         # Set 2
         self.set2_side1 = random.choice(self.sides)
         self.set2_side2 = random.choice(self.sides)
-        RollLogic.rollLogic(self.set2_side1, self.rollZone2, self.left2_dot1, self.left2_dot2, self.left2_dot3, self.left2_dot4, self.left2_dot5, self.left2_dot6)
-        RollLogic.rollLogic2(self.set2_side2, self.rollZone2, self.right2_dot1, self.right2_dot2, self.right2_dot3, self.right2_dot4, self.right2_dot5, self.right2_dot6) 
+        RollLogic.rollLogic(self.set2_side1, self.rollZone2, self.left2_dot1, self.left2_dot2, self.left2_dot3, self.left2_dot4,
+                             self.left2_dot5, self.left2_dot6)
+        RollLogic.rollLogic2(self.set2_side2, self.rollZone2, self.right2_dot1, self.right2_dot2, self.right2_dot3, self.right2_dot4, 
+                             self.right2_dot5, self.right2_dot6) 
         # Set 3
         self.set3_side1 = random.choice(self.sides)
         self.set3_side2 = random.choice(self.sides)
-        RollLogic.rollLogic(self.set3_side1, self.rollZone3, self.left3_dot1, self.left3_dot2, self.left3_dot3, self.left3_dot4, self.left3_dot5, self.left3_dot6)
-        RollLogic.rollLogic2(self.set3_side2, self.rollZone3, self.right3_dot1, self.right3_dot2, self.right3_dot3, self.right3_dot4, self.right3_dot5, self.right3_dot6)
+        RollLogic.rollLogic(self.set3_side1, self.rollZone3, self.left3_dot1, self.left3_dot2, self.left3_dot3, self.left3_dot4, 
+                            self.left3_dot5, self.left3_dot6)
+        RollLogic.rollLogic2(self.set3_side2, self.rollZone3, self.right3_dot1, self.right3_dot2, self.right3_dot3, self.right3_dot4,
+                             self.right3_dot5, self.right3_dot6)
         # Set 4
         self.set4_side1 = random.choice(self.sides)
         self.set4_side2 = random.choice(self.sides)
-        RollLogic.rollLogic(self.set4_side1, self.rollZone4, self.left4_dot1, self.left4_dot2, self.left4_dot3, self.left4_dot4, self.left4_dot5, self.left4_dot6)
-        RollLogic.rollLogic2(self.set4_side2, self.rollZone4, self.right4_dot1, self.right4_dot2, self.right4_dot3, self.right4_dot4, self.right4_dot5, self.right4_dot6)
+        RollLogic.rollLogic(self.set4_side1, self.rollZone4, self.left4_dot1, self.left4_dot2, self.left4_dot3, self.left4_dot4,
+                             self.left4_dot5, self.left4_dot6)
+        RollLogic.rollLogic2(self.set4_side2, self.rollZone4, self.right4_dot1, self.right4_dot2, self.right4_dot3, self.right4_dot4, 
+                             self.right4_dot5, self.right4_dot6)
         # Set 5
         self.set5_side1 = random.choice(self.sides)
         self.set5_side2 = random.choice(self.sides)
-        RollLogic.rollLogic(self.set5_side1, self.rollZone5, self.left5_dot1, self.left5_dot2, self.left5_dot3, self.left5_dot4, self.left5_dot5, self.left5_dot6)
-        RollLogic.rollLogic2(self.set5_side2, self.rollZone5, self.right5_dot1, self.right5_dot2, self.right5_dot3, self.right5_dot4, self.right5_dot5, self.right5_dot6)
+        RollLogic.rollLogic(self.set5_side1, self.rollZone5, self.left5_dot1, self.left5_dot2, self.left5_dot3, self.left5_dot4, 
+                            self.left5_dot5, self.left5_dot6)
+        RollLogic.rollLogic2(self.set5_side2, self.rollZone5, self.right5_dot1, self.right5_dot2, self.right5_dot3, self.right5_dot4,
+                              self.right5_dot5, self.right5_dot6)
         # Set 6
         self.set6_side1 = random.choice(self.sides)
         self.set6_side2 = random.choice(self.sides)
-        RollLogic.rollLogic(self.set6_side1, self.rollZone6, self.left6_dot1, self.left6_dot2, self.left6_dot3, self.left6_dot4, self.left6_dot5, self.left6_dot6)
-        RollLogic.rollLogic2(self.set6_side2, self.rollZone6, self.right6_dot1, self.right6_dot2, self.right6_dot3, self.right6_dot4, self.right6_dot5, self.right6_dot6)
+        RollLogic.rollLogic(self.set6_side1, self.rollZone6, self.left6_dot1, self.left6_dot2, self.left6_dot3, self.left6_dot4, 
+                            self.left6_dot5, self.left6_dot6)
+        RollLogic.rollLogic2(self.set6_side2, self.rollZone6, self.right6_dot1, self.right6_dot2, self.right6_dot3, self.right6_dot4,
+                            self.right6_dot5, self.right6_dot6)
         # Total labels
         self.total_roll = self.side + self.side2
         self.total_label.config(text=f"Total roll: {self.total_roll}")
@@ -350,12 +362,12 @@ class DiceRoller:
         self.roll_Button.place(x=125, y=270) # Moving all labels and buttons to the center of the window
         self.theme_button.place(x=25, y=305)
         self.theme_button2.place(x=225, y=305)
-        self.set_button1.place(x=125, y=405)
-        self.set_button2.place(x=125, y=435)
-        self.set_button3.place(x=125, y=465)
-        self.set_button4.place(x=125, y=495)
-        self.set_button5.place(x=125, y=525)
-        self.set_button6.place(x=125, y=555)
+        self.set_button1.place(x=125, y=375)
+        self.set_button2.place(x=125, y=405)
+        self.set_button3.place(x=125, y=435)
+        self.set_button4.place(x=125, y=465)
+        self.set_button5.place(x=125, y=495)
+        self.set_button6.place(x=125, y=525)
         #self.set_label.place(x=150, y=355)
         self.total_label.place(x=150, y=235)
         self.total_label2.place(x=560, y=235)
@@ -373,12 +385,12 @@ class DiceRoller:
         self.roll_Button.place(x=125, y=270) # Moving all labels and buttons to the center of the window
         self.theme_button.place(x=25, y=305)
         self.theme_button2.place(x=225, y=305)
-        self.set_button1.place(x=125, y=405)
-        self.set_button2.place(x=125, y=435)
-        self.set_button3.place(x=125, y=465)
-        self.set_button4.place(x=125, y=495)
-        self.set_button5.place(x=125, y=525)
-        self.set_button6.place(x=125, y=555)
+        self.set_button1.place(x=125, y=375)
+        self.set_button2.place(x=125, y=405)
+        self.set_button3.place(x=125, y=435)
+        self.set_button4.place(x=125, y=465)
+        self.set_button5.place(x=125, y=495)
+        self.set_button6.place(x=125, y=525)
         #self.set_label.place(x=150, y=355)
         self.total_label.place(x=150, y=235)
         self.total_label2.place(x=560, y=235)
