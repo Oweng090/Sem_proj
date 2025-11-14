@@ -39,8 +39,8 @@ class DiceRoller:
         self.total_label4 = Label(self.root, text="Total roll: ", background="grey", font=("Arial", 14))
         self.total_label5 = Label(self.root, text="Total roll: ", background="grey", font=("Arial", 14))
         self.total_label6 = Label(self.root, text="Total roll: ", background="grey", font=("Arial", 14))
-        self.set_label = Label(self.root, text="More Sets?", background="grey", font=("Arial", 14))  
-        self.set_label.place(x=150, y=350)
+        #self.set_label = Label(self.root, text="More Sets?", background="grey", font=("Arial", 14))  
+        #self.set_label.place(x=150, y=350)
 # TODO: Dice visuals ==================================================================#
 # Make an area to make squares for the dice and the dots
         self.rollZone = Canvas(self.root, width=300, height=150, background="blue", highlightthickness=2.5, highlightbackground="lime") 
@@ -229,6 +229,8 @@ class DiceRoller:
         self.total_label4.config(text=f"Total roll: {self.total_roll4}")
         self.total_roll5 = self.set5_side1 + self.set5_side2
         self.total_label5.config(text=f"Total roll: {self.total_roll5}")
+        self.total_roll6 = self.set6_side1 + self.set6_side2
+        self.total_label6.config(text=f"Total roll: {self.total_roll6}")
     # Function for fullscreen
     def fullScreen(self, *args):
         global fullscreenstatus, root
@@ -252,7 +254,7 @@ class DiceRoller:
         self.total_label4.config(background="#FF0000")
         self.total_label5.config(background="#FF0000")
         #total_label6.config(background=="#FF0000")
-        self.set_label.config(background="#FF0000")  
+        #self.set_label.config(background="#FF0000")  
     # Function for theme button 2.
     def theme_2(self):
         self.root.configure(background="#AAAAAA")
@@ -268,7 +270,7 @@ class DiceRoller:
         self.total_label3.config(background="#AAAAAA")
         self.total_label4.config(background="#AAAAAA")
         self.total_label5.config(background="#AAAAAA")
-        self.set_label.config(background="#AAAAAA")
+        #self.set_label.config(background="#AAAAAA")
     def set1(self):
         self.root.geometry("400x575")
         self.rollZone2.place_forget()
@@ -284,12 +286,14 @@ class DiceRoller:
         self.set_button3.place(x=125, y=445)
         self.set_button4.place(x=125, y=475)
         self.set_button5.place(x=125, y=505)
-        self.set_label.place(x=150, y=350)
-        self.total_label.place(x=150, y=200)
+        self.set_button6.place(x=125, y=535)
+        #self.set_label.place(x=150, y=350)
+        self.total_label.place(x=150, y=315)
         self.total_label2.place_forget()
         self.total_label3.place_forget()
         self.total_label4.place_forget()
         self.total_label5.place_forget()
+        self.total_label6.place_forget()
     def set2(self):
         self.root.geometry("800x575") # making window bigger for second set of dice
         self.rollZone2.place(x=450, y=75) # Moving the second rollzone to its place
@@ -305,12 +309,14 @@ class DiceRoller:
         self.set_button3.place(x=325, y=445)
         self.set_button4.place(x=325, y=475)
         self.set_button5.place(x=325, y=505)
-        self.set_label.place(x=350, y=350)
+        self.set_button6.place(x=325, y=535)
+        #self.set_label.place(x=350, y=350)
         self.total_label.place(x=150, y=250)
         self.total_label2.place(x=560, y=250)
         self.total_label3.place_forget()
         self.total_label4.place_forget()
         self.total_label5.place_forget()
+        self.total_label6.place_forget()
     def set3(self):
         self.root.geometry("1200x575")
         self.rollZone2.place(x=450, y=75)  # Moving the second rollzone to its place
@@ -326,12 +332,14 @@ class DiceRoller:
         self.set_button3.place(x=535, y=445)
         self.set_button4.place(x=535, y=475)
         self.set_button5.place(x=535, y=505)
-        self.set_label.place(x=550, y=350)
+        self.set_button6.place(x=535, y=535)
+        #self.set_label.place(x=550, y=350)
         self.total_label.place(x=150, y=250)
         self.total_label2.place(x=560, y=250)
         self.total_label3.place(x=960, y=250)
         self.total_label4.place_forget()
         self.total_label5.place_forget()
+        self.total_label6.place_forget()
     def set4(self):
         self.root.geometry("1200x575")
         self.rollZone2.place(x=450, y=75)
@@ -347,12 +355,14 @@ class DiceRoller:
         self.set_button3.place(x=125, y=465)
         self.set_button4.place(x=125, y=495)
         self.set_button5.place(x=125, y=525)
-        self.set_label.place(x=150, y=355)
-        self.total_label.place(x=150, y=210)
+        self.set_button6.place(x=125, y=555)
+        #self.set_label.place(x=150, y=355)
+        self.total_label.place(x=150, y=235)
         self.total_label2.place(x=560, y=235)
         self.total_label3.place(x=960, y=235)
         self.total_label4.place(x=560, y=435)
         self.total_label5.place_forget()
+        self.total_label6.place_forget()
     def set5(self):
         self.root.geometry("1200x575")
         self.rollZone2.place(x=450, y=75)
@@ -368,12 +378,14 @@ class DiceRoller:
         self.set_button3.place(x=125, y=465)
         self.set_button4.place(x=125, y=495)
         self.set_button5.place(x=125, y=525)
-        self.set_label.place(x=150, y=355)
+        self.set_button6.place(x=125, y=555)
+        #self.set_label.place(x=150, y=355)
         self.total_label.place(x=150, y=235)
         self.total_label2.place(x=560, y=235)
         self.total_label3.place(x=960, y=235)
         self.total_label4.place(x=560, y=435)
         self.total_label5.place(x=960, y=435)
+        self.total_label6.place_forget()
     def set6(self):
         self.root.geometry("1200x675")
         self.rollZone2.place(x=450, y=75)
@@ -381,19 +393,21 @@ class DiceRoller:
         self.rollZone4.place(x=450, y=275)
         self.rollZone5.place(x=850, y=275)
         self.rollZone6.place(x=50, y=275)
-        self.roll_Button.place(x=125, y=270) # Moving all labels and buttons to the center of the window
-        self.theme_button.place(x=25, y=305)
-        self.theme_button2.place(x=225, y=305)
-        self.set_button1.place(x=125, y=405)
-        self.set_button2.place(x=125, y=435)
-        self.set_button3.place(x=125, y=465)
-        self.set_button4.place(x=125, y=495)
-        self.set_button5.place(x=125, y=525)
-        self.set_label.place(x=150, y=355)
+        self.roll_Button.place(x=530, y=465) # Moving all labels and buttons to the center of the window
+        self.theme_button.place(x=430, y=500)
+        self.theme_button2.place(x=630, y=500)
+        self.set_button1.place(x=430, y=550)
+        self.set_button2.place(x=630, y=550)
+        self.set_button3.place(x=430, y=580)
+        self.set_button4.place(x=630, y=580)
+        self.set_button5.place(x=430, y=610)
+        self.set_button6.place(x=630, y=610)
+        #self.set_label.place(x=150, y=355)
         self.total_label.place(x=150, y=235)
         self.total_label2.place(x=560, y=235)
         self.total_label3.place(x=960, y=235)
         self.total_label4.place(x=560, y=435)
         self.total_label5.place(x=960, y=435)
+        self.total_label6.place(x=150, y=435)
 
 DiceRoller = DiceRoller()
