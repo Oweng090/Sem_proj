@@ -32,12 +32,13 @@ class DiceRoller:
     def widgets(self):
         self.label = Label(self.root, text="Dice Roll!", font=("Arial", 14), background='grey') # Title
         self.label.pack(pady=20)
-        self.total_label = Label(self.root, text=" ", background='grey', font=("Arial", 14)) # label for the total of the rolls.
-        self.total_label.place(x=150, y=345)
-        self.total_label2 = Label(self.root, text=" ", background="grey", font=("Arial", 14))# Label for the second sets total
-        self.total_label3 = Label(self.root, text=" ", background="grey", font=("Arial", 14))
-        self.total_label4 = Label(self.root, text=" ", background="grey", font=("Arial", 14))
-        self.total_label5 = Label(self.root, text=" ", background="grey", font=("Arial", 14))
+        self.total_label = Label(self.root, text="Total roll: ", background='grey', font=("Arial", 14)) # label for the total of the rolls.
+        self.total_label.place(x=150, y=315)
+        self.total_label2 = Label(self.root, text="Total roll: ", background="grey", font=("Arial", 14))# Label for the second sets total
+        self.total_label3 = Label(self.root, text="Total roll: ", background="grey", font=("Arial", 14))
+        self.total_label4 = Label(self.root, text="Total roll: ", background="grey", font=("Arial", 14))
+        self.total_label5 = Label(self.root, text="Total roll: ", background="grey", font=("Arial", 14))
+        self.total_label6 = Label(self.root, text="Total roll: ", background="grey", font=("Arial", 14))
         self.set_label = Label(self.root, text="More Sets?", background="grey", font=("Arial", 14))  
         self.set_label.place(x=150, y=350)
 # TODO: Dice visuals ==================================================================#
@@ -157,8 +158,8 @@ class DiceRoller:
         self.right6_dot6 = self.rollZone6.create_oval(0, 0, 0, 0, fill="black", outline="black")
 # TODO: Buttons ====================================================================#
 # Full Screen button
-        self.fullButton = Button(self.root, text="Fullscreen Toggle", bg="blue", width=20, command=lambda: self.fullScreen())
-        self.fullButton.place(x=125, y=350)
+        #self.fullButton = Button(self.root, text="Fullscreen Toggle", bg="blue", width=20, command=lambda: self.fullScreen())
+        #self.fullButton.place(x=125, y=350)
 # Roll Buttons
         self.roll_Button = Button(self.root, text="Roll Dice", bg="lime", width=20, command=lambda: self.roll_dice()) # defining a button for the GUI
         self.roll_Button.place(x=125, y=250) # making it so the program displays the button where i need it.
@@ -180,6 +181,8 @@ class DiceRoller:
         self.set_button5.place(x=125, y=505)
         self.set_button6 = Button(self.root, text="6 Sets", bg="lime", width=20, command=lambda: self.set6())
         self.set_button6.place(x=125, y=535)
+        self.root.bind("<f>", self.fullScreen)
+        self.root.bind("<Escape>", self.close)
 #===================================================================================#
 # create a function for the dice rolling
     def roll_dice(self):
@@ -226,10 +229,12 @@ class DiceRoller:
         self.total_roll5 = self.set5_side1 + self.set5_side2
         self.total_label5.config(text=f"Total roll: {self.total_roll5}")
     # Function for fullscreen
-    def fullScreen(self):
+    def fullScreen(self, *args):
         global fullscreenstatus, root
         fullscreenstatus = not fullscreenstatus
         self.root.attributes('-fullscreen', fullscreenstatus)
+    def close(self, *args):
+        self.root.destroy()
     # Function for the theme 1 button 
     def theme_1(self):
         self.root.configure(background="#FF0000") # Making window red
@@ -279,7 +284,7 @@ class DiceRoller:
         self.set_button4.place(x=125, y=475)
         self.set_button5.place(x=125, y=505)
         self.set_label.place(x=150, y=350)
-        self.total_label.place(x=150, y=250)
+        self.total_label.place(x=150, y=200)
         self.total_label2.place_forget()
         self.total_label3.place_forget()
         self.total_label4.place_forget()
