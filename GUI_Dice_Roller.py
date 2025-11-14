@@ -23,7 +23,6 @@ class DiceRoller:
         self.root.title("Dice!")
         self.root.iconbitmap("Dice.ico") # Dice icon at top of screen
         #sv_ttk.set_theme("dark")
-        self.root.bind("<Escape>", )
         self.root.geometry("400x575")
         self.root.configure(background='grey')
         self.widgets()
@@ -231,7 +230,6 @@ class DiceRoller:
         global fullscreenstatus, root
         fullscreenstatus = not fullscreenstatus
         self.root.attributes('-fullscreen', fullscreenstatus)
-
     # Function for the theme 1 button 
     def theme_1(self):
         self.root.configure(background="#FF0000") # Making window red
