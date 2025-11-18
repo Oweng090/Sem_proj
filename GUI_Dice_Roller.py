@@ -17,15 +17,16 @@ import RollLogic
 # Create class
 fullscreenstatus = False
 root = tk.Tk()
-root.update_idletasks()
 width = 400
 height = 575
-screen_width = root.winfo_screenwidth()
-screen_height = root.winfo_screenheight()
-x = (screen_width - width) // 2
-y = (screen_height - height) // 2
+
 class DiceRoller:
     def __init__(self):
+        screen_width = root.winfo_screenwidth()
+        screen_height = root.winfo_screenheight() 
+        root.update_idletasks()
+        x = (screen_width - width) // 2
+        y = (screen_height - height) // 2
         self.root = root
         self.root.title("Dice!")
         self.root.iconbitmap("Dice.ico") # Dice icon at top of screen
@@ -189,7 +190,7 @@ class DiceRoller:
         self.set_button6 = tk.Button(self.root, text="6 Sets", bg="lime", width=20, command=lambda: self.set6())
         self.set_button6.place(x=125, y=535)
         # -------- KEYBINDS -----------------#
-        self.root.bind("<f>", self.fullScreen)
+        self.root.bind("<Key-f>", self.fullScreen)
         self.root.bind("<Escape>", self.close)
         self.root.bind("<Return>", self.roll_dice)
         self.root.bind("<Key-1>", self.set1)
