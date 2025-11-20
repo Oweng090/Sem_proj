@@ -94,3 +94,10 @@ def rollLogic2(side, rollZone, dot1, dot2, dot3, dot4, dot5, dot6):
         rollZone.coords(dot4, 177, 24.25, 202, 49.25) # top left
         rollZone.coords(dot5, 177, 64.75, 202, 89.75) # middle left
         rollZone.coords(dot6, 265, 64.75, 290, 89.75) # middle right
+def center_screen(self, width, height):
+        screen_width = self.root.winfo_screenwidth()
+        screen_height = self.root.winfo_screenheight() 
+        self.root.update_idletasks()
+        x = (screen_width - width) // 2
+        y = (screen_height - height) // 2
+        self.root.geometry(f"{width}x{height}+{x}+{y}")

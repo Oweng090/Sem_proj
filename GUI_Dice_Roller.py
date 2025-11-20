@@ -16,28 +16,23 @@ import RollLogic
     #return self.root.attributes("-fullscreen", False)
 # Create class
 fullscreenstatus = False
-root = tk.Tk()
 width = 400
 height = 575
-
+root = tk.Tk()
 class DiceRoller:
     def __init__(self):
-        screen_width = root.winfo_screenwidth()
-        screen_height = root.winfo_screenheight() 
-        root.update_idletasks()
-        x = (screen_width - width) // 2
-        y = (screen_height - height) // 2
         self.root = root
+        RollLogic.center_screen(self, 400, 575)
         self.root.title("Dice!")
         self.root.iconbitmap("Dice.ico") # Dice icon at top of screen
         #sv_ttk.set_theme("dark")
-        self.root.geometry(f"{width}x{height}+{x}+{y}")
         self.root.configure(background='grey')
         self.widgets()
         self.root.mainloop()
 # TODO: Labels! ----------------------------------------------------------------------#
 # Create widgets
     def widgets(self):
+        self.key_label = tk.Label(self.root, text="Keybinds: 1-6 = amount of sets you want, Enter = Roll, Escape = close")
         self.label = tk.Label(self.root, text="Dice Roll!", font=("Arial", 14), background='grey') # Title
         self.label.pack(pady=20)
         self.total_label = tk.Label(self.root, text="Total roll: ", background='grey', font=("Arial", 14)) # label for the total of the rolls.
@@ -301,7 +296,7 @@ class DiceRoller:
         self.total_label6.config(background="#AAAAAA")
         #self.set_label.config(background="#AAAAAA")
     def set1(self, *args):
-        self.root.geometry("400x575")
+        RollLogic.center_screen(self, 400, 575)
         self.rollZone2.place_forget()
         self.rollZone3.place_forget()
         self.rollZone4.place_forget()
@@ -324,7 +319,7 @@ class DiceRoller:
         self.total_label5.place_forget()
         self.total_label6.place_forget()
     def set2(self, *args):
-        self.root.geometry("800x575") # making window bigger for second set of dice
+        RollLogic.center_screen(self, 800, 575)
         self.rollZone2.place(x=450, y=75) # Moving the second rollzone to its place
         self.rollZone3.place_forget()
         self.rollZone4.place_forget()
@@ -347,7 +342,7 @@ class DiceRoller:
         self.total_label5.place_forget()
         self.total_label6.place_forget()
     def set3(self, *args):
-        self.root.geometry("1200x575")
+        RollLogic.center_screen(self, 1200, 575)
         self.rollZone2.place(x=450, y=75)  # Moving the second rollzone to its place
         self.rollZone3.place(x=850, y=75)
         self.rollZone4.place_forget() # temporarily remove roll zone 4
@@ -370,7 +365,7 @@ class DiceRoller:
         self.total_label5.place_forget()
         self.total_label6.place_forget()
     def set4(self, *args):
-        self.root.geometry("1200x575")
+        RollLogic.center_screen(self, 1200, 575)
         self.rollZone2.place(x=450, y=75)
         self.rollZone3.place(x=850, y=75)
         self.rollZone4.place(x=450, y=275)
@@ -393,7 +388,7 @@ class DiceRoller:
         self.total_label5.place_forget()
         self.total_label6.place_forget()
     def set5(self, *args):
-        self.root.geometry("1200x575")
+        RollLogic.center_screen(self, 1200, 575)
         self.rollZone2.place(x=450, y=75)
         self.rollZone3.place(x=850, y=75)
         self.rollZone4.place(x=450, y=275)
@@ -416,7 +411,7 @@ class DiceRoller:
         self.total_label5.place(x=960, y=435)
         self.total_label6.place_forget()
     def set6(self, *args):
-        self.root.geometry("1200x675")
+        RollLogic.center_screen(self, 1200, 675)
         self.rollZone2.place(x=450, y=75)
         self.rollZone3.place(x=850, y=75)
         self.rollZone4.place(x=450, y=275)
