@@ -9,7 +9,7 @@ import tkinter as tk
 #from tkinter.ttk import *
 import random
 import RollLogic
-#import sv_ttk
+import sv_ttk
 # Fulscreen stuff
 # Function to exit fullscree
 #def exitFullscreen():
@@ -25,7 +25,7 @@ class DiceRoller:
         RollLogic.center_screen(self, 400, 575)
         self.root.title("Dice!")
         self.root.iconbitmap("Dice.ico") # Dice icon at top of screen
-        #sv_ttk.set_theme("dark")
+        sv_ttk.set_theme("light")
         self.root.configure(background='grey')
         self.widgets()
         self.root.mainloop()
