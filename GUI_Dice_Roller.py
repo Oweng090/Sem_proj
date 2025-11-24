@@ -185,7 +185,7 @@ class DiceRoller:
         self.set_button6 = tk.Button(self.root, text="6 Sets", bg="lime", width=20, command=lambda: self.set6())
         self.set_button6.place(x=125, y=535)
         # -------- KEYBINDS -----------------#
-        self.root.bind("<Key-f>", self.fullScreen)
+        #self.root.bind("<Key-f>", self.fullScreen)
         self.root.bind("<Escape>", self.close)
         self.root.bind("<Return>", self.roll_dice)
         self.root.bind("<Key-1>", self.set1)
