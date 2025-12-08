@@ -24,7 +24,7 @@ class DiceRoller:
         self.root = root
         RollLogic.center_screen(self, 400, 575)
         self.root.title("Dice!")
-        self.root.iconbitmap("Dice.ico") # Dice icon at top of screen
+        #self.root.iconbitmap("Dice.ico") # Dice icon at top of screen
         sv_ttk.set_theme("light")
         self.root.configure(background='grey')
         self.widgets()
