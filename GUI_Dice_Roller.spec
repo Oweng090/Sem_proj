@@ -5,7 +5,7 @@ a = Analysis(
     ['GUI_Dice_Roller.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[('Dice.ico', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
