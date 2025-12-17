@@ -4,3 +4,5 @@ This is a gui dice game That I am making for a project in intro to computer scie
 
 ## Purpose 
 Create a gui dice rolling game that has different thems and can roll up to six sets of dice at a time.
+## Pro Tip:
+When you want to run the exe have the ico file in the same folder or it wont find it.
