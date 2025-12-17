@@ -3,7 +3,8 @@
  False,
  False,
  False,
- 'C:\\Users\\202709\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyInstaller\\bootloader\\images\\icon-windowed.ico',
+ ['C:\\Users\\202709\\OneDrive - Western Nebraska Community '
+  'College\\Documents\\Python\\Sem_proj\\Dice.ico'],
  None,
  False,
  False,
@@ -3087,7 +3088,7 @@
  [],
  False,
  False,
- 1765219933,
+ 1765991270,
  [('runw.exe',
    'C:\\Users\\202709\\AppData\\Roaming\\Python\\Python313\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\runw.exe',
    'EXECUTABLE')],
