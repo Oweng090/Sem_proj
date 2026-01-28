@@ -10,6 +10,11 @@ import tkinter as tk
 import random
 import RollLogic
 import sv_ttk
+import time
+import asyncio
+import tracemalloc
+import threading
+tracemalloc.start()
 # Fulscreen stuff
 # Function to exit fullscree
 #def exitFullscreen():
@@ -164,7 +169,7 @@ class DiceRoller:
         #self.fullButton = Button(self.root, text="Fullscreen Toggle", bg="blue", width=20, command=lambda: self.fullScreen())
         #self.fullButton.place(x=125, y=350)
 # Roll Buttons
-        self.roll_Button = tk.Button(self.root, text="Roll Dice", bg="lime", width=20, command=lambda: self.roll_dice()) # defining a button for the GUI
+        self.roll_Button = tk.Button(self.root, text="Roll Dice", bg="lime", width=20, command=lambda: self.button_click_handler()) # defining a button for the GUI
         self.roll_Button.place(x=125, y=250) # making it so the program displays the button where i need it.
 # Theme Buttons
         self.theme_button = tk.Button(self.root, text="Theme 1", bg="#5A5A5A", fg="white", width=20, command=lambda: self.theme_1())
@@ -196,6 +201,20 @@ class DiceRoller:
         self.root.bind("<Key-6>", self.set6)
 #===================================================================================#
 # create a function for the dice rolling
+    async def RollAnimate(self, *args):
+        for i in range(5):
+            self.roll_dice()
+            await asyncio.sleep(0.005)
+    def run_async_in_thread(self, coroutine):
+        def wrapper():
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+            result = loop.run_until_complete(coroutine)
+
+        thread = threading.Thread(target=wrapper, daemon=True)
+        thread.start()
+    def button_click_handler(self):
+        self.run_async_in_thread(self.RollAnimate())
     def roll_dice(self, *args):
         # Set 1
         self.sides = [1, 2, 3, 4, 5, 6]
