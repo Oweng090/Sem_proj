@@ -202,9 +202,9 @@ class DiceRoller:
 #===================================================================================#
 # create a function for the dice rolling
     async def RollAnimate(self, *args):
-        for i in range(5):
+        for i in range(6):
             self.roll_dice()
-            await asyncio.sleep(0.005)
+            await asyncio.sleep(0.15)
     def run_async_in_thread(self, coroutine):
         def wrapper():
             loop = asyncio.new_event_loop()
